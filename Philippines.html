@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippines Blueprint - Budget Backpacking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+        }
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .glass-nav {
+            background: rgba(26, 26, 26, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 3px;
+        }
+        .glow-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-card:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 30px rgba(224, 106, 59, 0.4);
+        }
+        
+        .btn-outline-glow {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #1A1A1A;
+            color: #FFFFFF;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-outline-glow:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 20px rgba(224, 106, 59, 0.5);
+            background: rgba(224, 106, 59, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-200 antialiased selection:bg-[#E06A3B] selection:text-white custom-scrollbar">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-display text-lg sm:text-xl tracking-tight text-white font-extrabold hover:opacity-80 transition-opacity uppercase">
+                BUDGET<span class="text-[#E06A3B]">.</span>BACKPACKING
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-widest text-gray-400">
+                <a href="index.html#destinations" class="hover:text-white transition-colors duration-200">COUNTRIES</a>
+                <a href="Banana_pancake_trail.html" class="hover:text-white transition-colors duration-200">BANANA PANCAKE TRAIL</a>
+                <a href="Gear_list.html" class="hover:text-white transition-colors duration-200">GEAR LIST</a>
+                <a href="Explore_map.html" class="bg-[#E06A3B] text-white px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 shadow-lg shadow-[#E06A3B]/10">
+                    EXPLORE MAP
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header + Top Picture -->
+    <header class="pt-32 pb-12 px-6 max-w-7xl mx-auto">
+        <div class="border-b border-white/5 pb-10">
+            <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-4">Country Blueprint</span>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-8">
+                <div class="lg:col-span-7 space-y-6">
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white font-extrabold leading-[1.1]">
+                        The Philippines: Clear Lagoons & World-Class Diving
+                    </h1>
+                    <p class="text-gray-200 text-base sm:text-lg font-light leading-relaxed">
+                        With over 7,600 islands featuring some of the clearest turquoise waters on earth, navigating the vast geography of the Philippines is a truly epic adventure. Because these tropical gems are separated by deep marine channels and expansive seas, traveling between them relies heavily on domestic flights and seasonal ferry routes. This makes it absolutely essential to book your flights and key boat transfers in advance to avoid getting stranded or paying exorbitant last-minute prices.
+                    </p>
+                    <p class="text-gray-300 text-base font-light leading-relaxed">
+                        Beyond the powdery white-sand shorelines and dramatic limestone walls, the Philippines is a legendary mecca for underwater enthusiasts. This blueprint is specifically designed as an action-packed 3 to 4-week route crossing 5 to 6 of the country's most spectacular islands. From swimming with massive sardine runs and searching for thresher sharks to diving historic WWII shipwrecks, this island-hopping trail guarantees an unforgettable look at the most spectacular marine life in Southeast Asia.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-5 w-full">
+                    <div class="aspect-[2/3] max-h-[600px] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card shadow-2xl mx-auto lg:w-full">
+                        <img src="Phillippines first image.jpg" alt="Clear tropical waters and majestic outrigger boats in the Philippines" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mb-8">
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Daily Budget</span>
+                    <span class="font-display font-bold text-xl text-white">~$30 - $50 USD</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Primary Currency</span>
+                    <span class="font-display font-bold text-xl text-white">Philippine Peso (PHP)</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Transit Style</span>
+                    <span class="font-display font-bold text-xl text-white">Domestic Flights & Ferries</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Top Highlight</span>
+                    <span class="font-display font-bold text-xl text-white">Wreck Diving & Snorkeling</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- TRAVEL STRATEGY & DIVING SECTION -->
+    <section class="px-6 max-w-7xl mx-auto py-6">
+        <div class="bg-[#161616] border border-white/5 rounded-2xl p-8 shadow-xl">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-2xl">🤿</span>
+                <h2 class="font-display text-xl sm:text-2xl text-white font-extrabold tracking-tight uppercase">
+                    Backpacker Flight Operations, Island Time & Diving Standards
+                </h2>
+            </div>
+            
+            <p class="text-gray-300 font-light leading-relaxed mb-6">
+                Unlike overland trails in continental Southeast Asia, backpacking the Philippines requires dynamic planning. Navigating ocean swell, remote airport layouts, and marine parks demands some crucial insider tips:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5">
+                    <h3 class="text-[#E06A3B] font-display font-semibold text-lg mb-2">Pre-Book Domestic Flights</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        To cover islands like Siargao, Cebu, and Palawan within a month, you must rely on domestic budget airlines (primarily Cebu Pacific and AirAsia). Flight prices surge drastically and regional planes sell out weeks in advance. Lock in these key transit legs early to protect your itinerary.
+                    </p>
+                </div>
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5">
+                    <h3 class="text-[#E06A3B] font-display font-semibold text-lg mb-2">World-Class Diving Hubs</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        The Philippines sits directly in the Coral Triangle, boasting unmatched marine biodiversity. Whether you are getting your PADI certification, exploring deep historical WWII shipwrecks in Coron, or swimming alongside rare thresher sharks in Malapascua, the underwater scenes here are legendary.
+                    </p>
+                </div>
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5">
+                    <h3 class="text-[#E06A3B] font-display font-semibold text-lg mb-2">Weather & Island Time</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Everything in the archipelago runs on "island time." Due to typhoons or heavy monsoonal winds, ferry lines and flights are regularly delayed or cancelled entirely. Always build a "buffer day" into your travel schedule before an international flight back home out of Manila.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-6">
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B] mb-4">Essential Pack Track Tactics</h4>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-300 font-light">
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Cash Backup Required:</strong> ATMs on islands like El Nido and Siquijor frequently run out of physical cash or suffer power outages. Keep a reserve of Pesos.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Keep Terminal Cash:</strong> Be prepared to pay small, local environmental fees and terminal taxes in cash at almost every ferry port and domestic airport.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Invest in a Dry Bag:</strong> Island-hopping tours in traditional outrigger boats (bangkas) involve splashing seawater. A waterproof dry bag is mandatory gear.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Skip Manila Traffic:</strong> Manila is heavily congested and complex to navigate. Try to transit through its terminals and fly out to the islands as fast as possible.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <hr class="max-w-7xl mx-auto border-white/5 my-12">
+
+    <!-- PHILIPPINES RUN ITINERARY STOPS -->
+    <section class="px-6 max-w-7xl mx-auto pb-24">
+        <div class="mb-16">
+            <h2 class="font-display text-2xl sm:text-3xl text-white font-extrabold tracking-tight uppercase border-l-4 border-[#E06A3B] pl-4">
+                The Ultimate 4-Week Island Route
+            </h2>
+        </div>
+
+        <div class="space-y-24">
+            <!-- Stop 1: Manila -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">01</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Manila — 1 Day</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Your journey begins in the high-intensity capital of Manila on the main island of Luzon. As the major international aviation gateway, you will almost certainly land here. While many backpackers choose to head straight to the domestic terminal to catch flights out to the islands, spending one day lets you adjust to the timezone. If you do stay, explore the historic Spanish colonial walled city of Intramuros and visit Fort Santiago to gain a deep appreciation for the unique historical fusion of Spanish, American, and Filipino cultures.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Walk through the cobblestone streets of the historic Intramuros walled city</li>
+                            <li class="flex items-center gap-2">⚡ Visit Fort Santiago to learn about national hero José Rizal's history</li>
+                            <li class="flex items-center gap-2">⚡ Tour the beautiful baroque architecture of San Agustin Church</li>
+                            <li class="flex items-center gap-2">⚡ Catch a legendary sunset over the ocean horizon at Manila Baywalk</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Manila.jpg" alt="Vibrant night cityscape and skyline of Manila" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 2: Siargao Island -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Siargao Island.jpg" alt="Tall palm trees lining a rustic village beach in Siargao" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">02</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Siargao Island — 5 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Fly southeast to Siargao, the laid-back surf capital of the Philippines. Tucked away on the edge of the Pacific, this teardrop-shaped island has captured the hearts of backpackers worldwide with its dense palm-tree lined roads, amazing health-food cafes, and vibrant social culture. Spend five days surfing the legendary reef breaks of Cloud 9, renting a scooter to explore the endless coconut plantations of the interior, and taking a day boat out to the neighboring paradisiacal islets of Guyam, Daku, and Naked Island.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Surf or watch pros on the iconic wooden boardwalk at Cloud 9 break</li>
+                            <li class="flex items-center gap-2">⚡ Island hop on a bangka to Naked Island, Daku Island, and Guyam Island</li>
+                            <li class="flex items-center gap-2">⚡ Rent a scooter to ride through the sea of palms at the Coconut Lookout</li>
+                            <li class="flex items-center gap-2">⚡ Rope swing and cliff jump into the pristine waters of Maasin River</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 3: Bohol -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">03</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Bohol — 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Fly into Cebu and take a fast ferry over to Bohol, a diverse island packed with spectacular inland geological wonders and unique wildlife. Over four days, you can rent a scooter to witness the iconic Chocolate Hills—over a thousand symmetrical cone-shaped hills that turn chocolate-brown during the dry season. Stop by a sanctuary to see the tiny, endangered tarsiers (one of the world's smallest primates), cruise down the emerald waters of the Loboc River, and cross over the bridge to Panglao Island for gorgeous sandy beaches and great shore-snorkeling spots.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Marvel at the endless geological mounds from the Chocolate Hills viewpoint</li>
+                            <li class="flex items-center gap-2">⚡ See the tiny, nocturnal primates at the Philippine Tarsier Sanctuary</li>
+                            <li class="flex items-center gap-2">⚡ Eat lunch on a floating river boat cruise along the lush Loboc River</li>
+                            <li class="flex items-center gap-2">⚡ Relax on Alona Beach and snorkel the marine sanctuaries of Panglao</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Bohol.jpg" alt="Scenic green rolling mounds of the Chocolate Hills in Bohol" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 4: Siquijor -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Siquijor.jpg" alt="Beautiful limestone structures and tropical cove in Siquijor" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">04</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Siquijor — 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Take a direct ferry from Bohol to Siquijor, a mystical island historically famous for its local legends of witchcraft, healers, and magic. Today, Siquijor is an absolute favorite for backpackers seeking laid-back coastal roads and natural wonders. Spend four days swing-diving from ropes into the tiered turquoise pools of Cambugahay Falls, cliff-jumping into the ocean at Salagdoong Beach, and exploring underwater marine sanctuaries directly from the beach.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3 mb-4">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Swing from Tarzan ropes into the milky-blue pools of Cambugahay Falls</li>
+                            <li class="flex items-center gap-2">⚡ Leap off concrete diving platforms into the sea at Salagdoong Beach</li>
+                            <li class="flex items-center gap-2">⚡ Visit the mystical, 400-year-old Old Enchanted Balete Tree and fish spa</li>
+                            <li class="flex items-center gap-2">⚡ Ride a scooter completely around the island's scenic perimeter highway</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 rounded-xl bg-orange-950/20 border border-orange-500/20 max-w-2xl text-xs text-gray-300">
+                        <strong class="text-[#E06A3B] block mb-1">🤿 World-Class Day Trip: Apo Island</strong>
+                        Siquijor is the absolute best base to arrange a diving or snorkeling day trip out to <strong class="text-white">Apo Island</strong>. This protected volcanic marine reserve is home to some of the most pristine coral gardens and sea turtle populations in Asia.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 5: Cebu (Moalboal) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">05</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Cebu (Moalboal) — 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Ferry back to Cebu Island and travel south down the coast to the adventure hub of Moalboal. This coastal town offers two mind-blowing backpacker highlights. First, you can swim just 30 meters off Panagsama Beach to witness the legendary Sardine Run—snorkeling directly over millions of swirling sardines that block out the sun in massive, moving bait balls. Second, take a short day trip to Badian to experience canyoneering down the cliffs and jungle ravines of the famous, multi-tiered Kawasan Falls.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Snorkel with the massive, swirling Sardine Run right off Panagsama Beach</li>
+                            <li class="flex items-center gap-2">⚡ Trek, slide, and cliff-jump through canyons to reach Kawasan Falls</li>
+                            <li class="flex items-center gap-2">⚡ Spot giant sea turtles grazing on sea grass fields close to the shore</li>
+                            <li class="flex items-center gap-2">⚡ Rent a scooter and head into the hills to climb rugged Osmeña Peak</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Cebu (Moalboal).jpg" alt="A large green sea turtle grazing along the seabed in Moalboal" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 6: Palawan (El Nido & Coron) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Palawan (El Nido & Coron).jpg" alt="Dramatic limestone peaks and outrigger boats resting on clear waters in Palawan" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">06</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Palawan (El Nido & Coron) — 1 Week</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Conclude your journey by flying from Cebu over to the world-renowned province of Palawan. Split your week between El Nido and Coron. In El Nido, take iconic boat tours past towering limestone monoliths to kayak in the crystal-clear waters of the Big Lagoon and Secret Beach. Next, take a ferry or a multi-day expedition boat over to Coron. Coron is famous for holding some of the most remarkable scuba diving settings in the world, featuring a fleet of massive, preserved WWII Japanese supply shipwrecks lying at recreational diving depths.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Kayak between giant karst formations in El Nido's emerald Big Lagoon</li>
+                            <li class="flex items-center gap-2">⚡ Dive historical, coral-encrusted WWII Japanese shipwrecks in Coron</li>
+                            <li class="flex items-center gap-2">⚡ Swim in the hyper-clear, mixed salt and fresh waters of Kayangan Lake</li>
+                            <li class="flex items-center gap-2">⚡ Watch an incredible tropical sunset over the shores of Nacpan Beach</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORKING NAVIGATION PATH SPLIT (Indonesia on Left, Australia on Right) -->
+    <section class="bg-[#161616] py-20 border-t border-white/5 mt-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-2">Transit Loops</span>
+                <h3 class="font-display text-3xl text-white font-extrabold">Keep Mapping the Trail</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <!-- Left Button: Indonesia -->
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Archipelago Crossing</div>
+                        <h4 class="font-display text-xl text-white font-bold">Fly to Indonesia</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Catch a direct flight to Denpasar or Jakarta to explore the volcanic terrain of Lombok, Gili Island snorkeling runs, and multi-day boat expeditions past free-roaming Komodo Dragons.
+                        </p>
+                    </div>
+                    <a href="indonesia.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        ← Launch Indonesia Blueprint
+                    </a>
+                </div>
+
+                <!-- Right Button: Australia -->
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Southern Oceania Connection</div>
+                        <h4 class="font-display text-xl text-white font-bold">Fly to Australia</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Board a direct long-haul flight down south straight into Western Australia or East Coast hubs to embark on an epic campervan road trip or secure a Working Holiday Visa.
+                        </p>
+                    </div>
+                    <a href="australia.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        Explore Australia Run →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-xs text-gray-600 bg-[#121212] border-t border-white/5">
+        <p>&copy; 2026 BUDGET BACKPACKING. Designed as a practical country-by-country travel blueprint.</p>
+    </footer>
+
+</body>
+</html>

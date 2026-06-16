@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Blueprint - Budget Backpacking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+        }
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .glass-nav {
+            background: rgba(26, 26, 26, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 3px;
+        }
+        .glow-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-card:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 30px rgba(224, 106, 59, 0.4);
+        }
+        
+        .btn-outline-glow {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #1A1A1A;
+            color: #FFFFFF;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-outline-glow:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 20px rgba(224, 106, 59, 0.5);
+            background: rgba(224, 106, 59, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-200 antialiased selection:bg-[#E06A3B] selection:text-white custom-scrollbar">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-display text-lg sm:text-xl tracking-tight text-white font-extrabold hover:opacity-80 transition-opacity uppercase">
+                BUDGET<span class="text-[#E06A3B]">.</span>BACKPACKING
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-widest text-gray-400">
+                <a href="index.html#destinations" class="hover:text-white transition-colors duration-200">COUNTRIES</a>
+                <a href="Banana_pancake_trail.html" class="hover:text-white transition-colors duration-200">BANANA PANCAKE TRAIL</a>
+                <a href="Gear_list.html" class="hover:text-white transition-colors duration-200">GEAR LIST</a>
+                <a href="Explore_map.html" class="bg-[#E06A3B] text-white px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 shadow-lg shadow-[#E06A3B]/10">
+                    EXPLORE MAP
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header + Top Picture -->
+    <header class="pt-32 pb-12 px-6 max-w-7xl mx-auto">
+        <div class="border-b border-white/5 pb-10">
+            <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-4">Country Blueprint</span>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-8">
+                <div class="lg:col-span-7 space-y-6">
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white font-extrabold leading-[1.1]">
+                        Japan: Hyper-Modern Cities and Ancient Golden Trails
+                    </h1>
+                    <p class="text-gray-200 text-base sm:text-lg font-light leading-relaxed">
+                        Japan is an extraordinary study in architectural and social contradictions, where high-speed bullet trains tear past quiet, wooden Shinto shrines and mountain ranges give way to blinding neon grids. While the country spans a vast northern-to-southern volcanic arc, this primary independent loop traces the classic, highly efficient path down Honshu Island. This specific journey focuses entirely on the historic and heavy cultural cornerstones encountered while traveling through Tokyo, Kyoto, Osaka, and Hiroshima.
+                    </p>
+                    <p class="text-gray-300 text-base font-light leading-relaxed">
+                        Navigating Japan as a budget backpacker requires slightly more strategic planning than traveling through developing mainland networks, but it pays off with unmatched transit systems and unparalleled street-level safety. By sticking to local subway networks, maximizing regional rail passes, and diving into legendary convenience store food stalls and hidden basement ramen alleys, you can experience one of the most culturally unique societies on earth without breaking the bank.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-5 w-full">
+                    <div class="aspect-[2/3] max-h-[600px] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card shadow-2xl mx-auto lg:w-full">
+                        <img src="First picture.jpg" alt="Stunning Japanese architectural gate and traditional landscape vistas" class="w-full h-full object-cover contrast-95 brightness-95 saturate-115">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mb-8">
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Daily Budget</span>
+                    <span class="font-display font-bold text-xl text-white">~$50 - $70 USD</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Primary Currency</span>
+                    <span class="font-display font-bold text-xl text-white">Japanese Yen (JPY)</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Transit Style</span>
+                    <span class="font-display font-bold text-xl text-white">Shinkansen, Metro & Buses</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Top Food Value</span>
+                    <span class="font-display font-bold text-xl text-white">Konbini Stalls & Standing Ramen</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="px-6 max-w-7xl mx-auto py-6">
+        <div class="bg-[#161616] border border-white/5 rounded-2xl p-8 shadow-xl">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-2xl">🏂</span>
+                <h2 class="font-display text-xl sm:text-2xl text-white font-extrabold tracking-tight uppercase">
+                    Seasonal Snow, Northern Trails & Hidden Zones
+                </h2>
+            </div>
+            
+            <p class="text-gray-300 font-light leading-relaxed mb-6">
+                If you choose to venture off the central golden trail, Japan offers world-class seasonal alpine action and vast northern wilderness landscapes that feel a universe away from Honshu's neon metros:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5">
+                    <h3 class="text-[#E06A3B] font-display font-semibold text-lg mb-2">The Ski & Powder Season</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Japan is globally renowned for "Japow"—some of the lightest, deepest powder snow on earth. The premier window runs from <strong class="text-white">late December through February</strong>. Top destinations include the massive, interconnected resorts of <strong class="text-white">Niseko</strong> and Rusutsu up north in Hokkaido, or the steep alpine bowls and historic Olympic runs of <strong class="text-white">Hakuba</strong> tucked away in the Japanese Alps of Nagano.
+                    </p>
+                </div>
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5">
+                    <h3 class="text-[#E06A3B] font-display font-semibold text-lg mb-2">Expedition Through the North</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        A trek through Northern Japan (<strong class="text-white">Tohoku and Hokkaido</strong>) reveals wild, dramatic landscapes. Explore the ancient cedar forests and historic mountain temples of Yamadera, or catch a ferry to Hokkaido to see the rugged volcanic rims of Lake Toya and the massive national parks of Daisetsuzan—perfect for escaping summer crowds.
+                    </p>
+                </div>
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5">
+                    <h3 class="text-[#E06A3B] font-display font-semibold text-lg mb-2">Other Notable Corners</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        For a deeper look into regional culture, head south to the subtropical island of <strong class="text-white">Kyushu</strong> to experience the active volcano of Mt. Aso and relax in the hot springs of Beppu. Alternatively, take on the <strong class="text-white">Shikoku 88 Temple Pilgrimage</strong> or explore the remote, rugged mountain valleys of the Kiso Valley along the historic Nakasendo trail.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-6">
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B] mb-4">Smart Budget Japan Operations</h4>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-300 font-light">
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Master the Konbini:</strong> Rely on 7-Eleven, Lawson, and FamilyMart for incredibly cheap, high-quality meals like bento boxes and fresh onigiri.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Pre-plan High Transit:</strong> Calculate your route early; regional JR highway buses or discount flight carriers can beat Shinkansen prices significantly.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Book Hostel Beds Early:</strong> Budget accommodations and capsule hotels in Tokyo and Kyoto fill up months ahead during cherry blossom and autumn peaks.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Cash is Still King:</strong> Despite the futuristic tech veneer, many traditional temple sites, coin lockers, and small ramen shops take cash only.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <hr class="max-w-7xl mx-auto border-white/5 my-12">
+
+    <section class="px-6 max-w-7xl mx-auto pb-24">
+        <div class="mb-16">
+            <h2 class="font-display text-2xl sm:text-3xl text-white font-extrabold tracking-tight uppercase border-l-4 border-[#E06A3B] pl-4">
+                The Central Honshu Loop
+            </h2>
+        </div>
+
+        <div class="space-y-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">01</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Tokyo — 5 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Dive headfirst into the largest metropolitan area on earth. Tokyo is an absolute monolith—a sprawling, endlessly fascinating city where you could easily spend weeks exploring different blocks and still feel like you've badly seen nothing at all. Spend your five days navigating the hyper-efficient subway grid to witness the organized chaos of the Shibuya Crossing, the historic temple gates of Senso-ji in Asakusa, and the blinding neon electronics district of Akihabara. Take a quiet morning stroll through the forested grounds of Meiji Shrine, and wrap up your nights checking out the tiny, smoky alleyway bars of Omoide Yokocho in Shinjuku.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Experience the famous organized chaos of the Shibuya Crossing</li>
+                            <li class="flex items-center gap-2">⚡ Explore the historic temple grounds and gates of Senso-ji in Asakusa</li>
+                            <li class="flex items-center gap-2">⚡ Dive into the electric, neon-lit gaming hubs of Akihabara</li>
+                            <li class="flex items-center gap-2">⚡ Unwind at the hidden, smoky alleyway bars of Omoide Yokocho</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Tokyo.jpg" alt="Bustling neon skyscrapers and massive crowds crossing the streets in Tokyo" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Mount Fuji.jpg" alt="The iconic snow-capped peak of Mount Fuji towering over the surrounding lakes and forests" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">02</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Mount Fuji</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        No journey along the Golden Route is complete without encountering the perfectly symmetrical volcanic cone of Mount Fuji. Depending on your travel style and the season, you can easily experience this sacred icon via quick day trips from Tokyo to the Fuji Five Lakes area (like Lake Kawaguchiko) or Hakone for panoramic lookout views and lakeside hot springs. If your visit falls within the official summer climbing season (early July to early September), you can challenge yourself to hike up to the summit to witness the sunrise above a sea of clouds.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Capture clear mirror views of the mountain at Lake Kawaguchiko</li>
+                            <li class="flex items-center gap-2">⚡ Soak in traditional hot springs overlooking the peaks in Hakone</li>
+                            <li class="flex items-center gap-2">⚡ Challenge yourself to scale the summit trail during the summer window</li>
+                            <li class="flex items-center gap-2">⚡ Witness the sunrise from above the cloud line at the peak</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">03</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Kyoto — 5 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Board the Shinkansen and head southwest to Kyoto, the cultural and historic heart of Japan. This city preserves an incredible wealth of traditional timber architecture, rock gardens, and classic geisha districts. Over five days, make sure to hike through the stunning, endless tunnels of vermilion gates at Fushimi Inari Shrine, see the brilliant gold-leaf reflection of Kinkaku-ji (The Golden Pavilion), and walk among the towering stalks of the Arashiyama Bamboo Grove. Spend your late afternoons exploring the narrow, moody streets of Gion, keeping a respectful distance if you spot a geisha on her way to an appointment.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Hike through thousands of vermilion gates at Fushimi Inari Shrine</li>
+                            <li class="flex items-center gap-2">⚡ See the gold-leaf design of Kinkaku-ji (The Golden Pavilion)</li>
+                            <li class="flex items-center gap-2">⚡ Stroll among towering green stalks at Arashiyama Bamboo Grove</li>
+                            <li class="flex items-center gap-2">⚡ Wander the moody traditional wooden alleyways of the Gion district</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Kyoto.jpg" alt="Stunning traditional temples and historic architecture surrounded by nature in Kyoto" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Osaka.jpg" alt="Vibrant neon billboards and dense urban landscape along the canals of Osaka" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">04</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Osaka — 3 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Just a short train ride from Kyoto lies Osaka, a city defined by a completely different, high-energy, and unpretentious social vibe. Osaka is famous for its gritty, neon-drenched street food culture and friendly locals. Dedicate your three days here to exploring the massive, colorful signs along the Dotonbori canal, sampling local comfort street classics like Takoyaki (octopus balls) and Okonomiyaki (savory pancakes). Take half a day to tour the historic Osaka Castle grounds, and use your final day to take a quick train run out to the nearby town of Nara to see the giant Buddha statue and walk among the hundreds of free-roaming deer.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Feast on street classics like Takoyaki and Okonomiyaki in Dotonbori</li>
+                            <li class="flex items-center gap-2">⚡ Tour the historic fortress gates and gardens of Osaka Castle</li>
+                            <li class="flex items-center gap-2">⚡ Take a day trip to Nara to meet the famous free-roaming deer</li>
+                            <li class="flex items-center gap-2">⚡ See the massive, ancient bronze Buddha inside Nara's Todai-ji</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">05</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Hiroshima — 2 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Wrap up your Honshu loop by traveling further west to Hiroshima, a city deeply transformed by the tragic events of August 6, 1945, when it became the target of the world's first atomic bomb strike. Spend your first day paying respects at the profoundly moving Hiroshima Peace Memorial Museum and walking past the stark skeletal structure of the Atomic Bomb Dome. On your second day, take a short train and ferry ride out to Miyajima Island to see the spectacular Itsukushima Shrine, famous for its massive red torii gate that appears to float right on top of the sea during high tide.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Pay respects at the moving Hiroshima Peace Memorial Museum</li>
+                            <li class="flex items-center gap-2">⚡ Stand before the preserved historic ruins of the Atomic Bomb Dome</li>
+                            <li class="flex items-center gap-2">⚡ Ride the ferry to Miyajima Island to find its coastal Shinto shrine</li>
+                            <li class="flex items-center gap-2">⚡ View the grand Itsukushima Torii Gate rising straight out of the sea</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Hiroshima.jpg" alt="The poignant concrete skeletal frame of the Atomic Bomb Dome peace memorial in Hiroshima" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#161616] py-20 border-t border-white/5 mt-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-2">Transit Loops</span>
+                <h3 class="font-display text-3xl text-white font-extrabold">Keep Mapping the Trail</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Ferry / Short Flight Route</div>
+                        <h4 class="font-display text-xl text-white font-bold">Cross to South Korea</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Catch a direct budget flight from Osaka or hop on the international ferry from Fukuoka to explore South Korea's neon alleys, mountain fortresses, and palace structures.
+                        </p>
+                    </div>
+                    <a href="southkorea.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        ← Launch South Korea Guide
+                    </a>
+                </div>
+
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Tropical Archipelago Run</div>
+                        <h4 class="font-display text-xl text-white font-bold">Fly to the Philippines</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Board a budget flight southward into Manila or Cebu to trade Honshu's mountain valleys for crystal clear turquoise oceans and white-sand island loops.
+                        </p>
+                    </div>
+                    <a href="philippines.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        Explore Philippines Run →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-xs text-gray-600 bg-[#121212] border-t border-white/5">
+        <p>&copy; 2026 BUDGET BACKPACKING. Designed as a practical country-by-country travel blueprint.</p>
+    </footer>
+
+</body>
+</html>

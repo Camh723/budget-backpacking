@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysia Blueprint - Budget Backpacking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+        }
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .glass-nav {
+            background: rgba(26, 26, 26, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 3px;
+        }
+        .glow-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-card:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 30px rgba(224, 106, 59, 0.4);
+        }
+        
+        .btn-outline-glow {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #1A1A1A;
+            color: #FFFFFF;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-outline-glow:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 20px rgba(224, 106, 59, 0.5);
+            background: rgba(224, 106, 59, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-200 antialiased selection:bg-[#E06A3B] selection:text-white custom-scrollbar">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-display text-lg sm:text-xl tracking-tight text-white font-extrabold hover:opacity-80 transition-opacity uppercase">
+                BUDGET<span class="text-[#E06A3B]">.</span>BACKPACKING
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-widest text-gray-400">
+                <a href="index.html#destinations" class="hover:text-white transition-colors duration-200">COUNTRIES</a>
+                <a href="Banana_pancake_trail.html" class="hover:text-white transition-colors duration-200">BANANA PANCAKE TRAIL</a>
+                <a href="Gear_list.html" class="hover:text-white transition-colors duration-200">GEAR LIST</a>
+                <a href="Explore_map.html" class="bg-[#E06A3B] text-white px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 shadow-lg shadow-[#E06A3B]/10">
+                    EXPLORE MAP
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header + Top Picture -->
+    <header class="pt-32 pb-12 px-6 max-w-7xl mx-auto">
+        <div class="border-b border-white/5 pb-10">
+            <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-4">Country Blueprint</span>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-8">
+                <div class="lg:col-span-7 space-y-6">
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white font-extrabold leading-[1.1]">
+                        Malaysia: A Fusion of Modernity, Heritage, and Ancient Jungles
+                    </h1>
+                    <p class="text-gray-200 text-base sm:text-lg font-light leading-relaxed">
+                        Malaysia stands out as one of Southeast Asia's most multifaceted destinations, split cleanly between urban sophistication and wild, untouched natural landscapes. Geographically divided by the South China Sea into Peninsular Malaysia and Malaysian Borneo, this blueprint focuses on the incredibly rich, highly accessible overland track across the peninsula. From the gleaming glass towers of Kuala Lumpur to the ancient, pristine rain canopies of Taman Negara, the country transitions seamlessly between the future and the prehistoric.
+                    </p>
+                    <p class="text-gray-300 text-base font-light leading-relaxed">
+                        What truly shapes the modern identity of Malaysia is its brilliant cultural synthesis. It is a nation woven from Malay, Chinese, Indian, and indigenous threads, alongside a distinct layer of European colonial history visible in its seaside ports. This harmonious cultural overlap means you will encounter a dazzling array of religious architecture, multi-lingual communities, and what is widely considered the finest, most diverse culinary scene in Asia. Highly modern infrastructure combined with affordable local networks makes it an absolute dream for budget travelers seeking maximum contrast with minimal stress.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-5 w-full">
+                    <div class="aspect-[2/3] max-h-[600px] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card shadow-2xl mx-auto lg:w-full">
+                        <img src="Malaysia.jpg" alt="Aerial view of crystal clear turquoise waters and pristine beach in Malaysia" class="w-full h-full object-cover saturate-100">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mb-8">
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Daily Budget</span>
+                    <span class="font-display font-bold text-xl text-white">~$30 - $45 USD</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Primary Currency</span>
+                    <span class="font-display font-bold text-xl text-white">Malaysian Ringgit (MYR)</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Transit Style</span>
+                    <span class="font-display font-bold text-xl text-white">Trains, Intercity Coaches & Grab</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Top Culinary Focus</span>
+                    <span class="font-display font-bold text-xl text-white">Hawker Centers & Street Food</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HEALTH & SAFETY SECTION -->
+    <section class="px-6 max-w-7xl mx-auto py-6">
+        <div class="bg-[#161616] border border-white/5 rounded-2xl p-8 shadow-xl">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-2xl">🍜</span>
+                <h2 class="font-display text-xl sm:text-2xl text-white font-extrabold tracking-tight uppercase">
+                    Backpacker Health, Street Food & Eco Hygiene
+                </h2>
+            </div>
+            
+            <p class="text-gray-300 font-light leading-relaxed mb-6">
+                While Malaysia boasts excellent medical infrastructure and high standards of cleanliness, diving into street food markets and dense jungle highlands requires smart travel practices:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5">
+                    <h3 class="text-[#E06A3B] font-display font-semibold text-lg mb-2">Street Food Safety</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Malaysia's hawker stalls are legendary and generally very safe. To minimize any risk of stomach issues, pick stalls with high local turnover where food is cooked fresh to order over open flames. Stick to bottled or filtered water across the peninsula.
+                    </p>
+                </div>
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5">
+                    <h3 class="text-[#E06A3B] font-display font-semibold text-lg mb-2">Jungle Parasites & Pests</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Deep in primary rainforests like Taman Negara, land leeches are common along damp muddy trails. While completely harmless, their bites bleed freely. Wear proper leech socks, apply insect repellent generously, and check your gear frequently.
+                    </p>
+                </div>
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5">
+                    <h3 class="text-[#E06A3B] font-display font-semibold text-lg mb-2">Heat & Humidity Shock</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        The heavy equatorial climate demands constant hydration. Protect yourself from sudden downpours and strong UV rays alike. Take advantage of cooler mountainous terrains like the Cameron Highlands to give your body a break from coastal humidity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-6">
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B] mb-4">Essential Pack Track Tactics</h4>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-300 font-light">
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Jungle Preparation:</strong> Pack a lightweight rain poncho, sturdy trail shoes, and specialized clothing treatment for wilderness hikes.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Download Grab:</strong> Use Southeast Asia's premier ride-hailing app for transparent, fixed-fare urban transit throughout the country.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Respect Local Custom:</strong> Dress modestly when visiting mosques or temples—keep lightweight sarongs or long pants handy.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Pre-Book Island Boats:</strong> Always verify jetty seasonal schedules and dynamic ocean weather conditions before island crossings.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <hr class="max-w-7xl mx-auto border-white/5 my-12">
+
+    <!-- MALAYSIA RUN ITINERARY STOPS -->
+    <section class="px-6 max-w-7xl mx-auto pb-24">
+        <div class="mb-16">
+            <h2 class="font-display text-2xl sm:text-3xl text-white font-extrabold tracking-tight uppercase border-l-4 border-[#E06A3B] pl-4">
+                The Ultimate Peninsular Malaysia Loop
+            </h2>
+        </div>
+
+        <div class="space-y-24">
+            <!-- Stop 1: Kuala Lumpur -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">01</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Kuala Lumpur — 3 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Kick off your journey in Malaysia's high-energy capital. Kuala Lumpur is a striking metropolis where ultra-modern skyscrapers cut right through patches of raw tropical greenery. Spend your three days navigating the city's complex rail systems to see the majestic Petronas Twin Towers, the historic Merdeka Square, and the vibrant street markets of Chinatown. Take a short train ride out to the towering limestone cliffs of the Batu Caves, and make sure to dedicate your evenings to exploring the world-class street food stalls along Jalan Alor.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Stand beneath the towering and iconic Petronas Twin Towers</li>
+                            <li class="flex items-center gap-2">⚡ Climb the rainbow stairs up into the historic Batu Caves</li>
+                            <li class="flex items-center gap-2">⚡ Feast on an endless varieties of late-night street food along Jalan Alor</li>
+                            <li class="flex items-center gap-2">⚡ Explore the historic colonial roots surrounding Merdeka Square</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Kuala Lumpur.jpg" alt="Petronas Twin Towers at Night in Kuala Lumpur" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 2: Malacca -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Malacca.jpg" alt="Vibrant Jonker Walk Street Market in Malacca" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">02</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Malacca — 2 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Head south to Malacca, an ancient coastal trading port steeped in deep history. This UNESCO World Heritage city showcases a fascinating architectural mix left behind by Portuguese, Dutch, and British colonial eras, beautifully blended with traditional Peranakan culture. Spend two days wandering past the bright terracotta walls of the Dutch Square, exploring the historic ruins of St. Paul's Church, and sampling authentic Nyonya cuisine. Time your visit for the weekend to experience the electric atmosphere and antique stalls of the famous Jonker Walk Night Market.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Dive into the bustling weekend crowds at Jonker Walk Night Market</li>
+                            <li class="flex items-center gap-2">⚡ Photograph the iconic terracotta-red structures of the Dutch Square</li>
+                            <li class="flex items-center gap-2">⚡ Hike up to the panoramic lookout at the ruins of St. Paul's Church</li>
+                            <li class="flex items-center gap-2">⚡ Try authentic Nyonya laksa and sweet, refreshing Cendol</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 3: Cameron Highlands -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">03</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Cameron Highlands — 2 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Head up into the Titiwangsa Mountains to reach the Cameron Highlands, where the cool mountain air offers a refreshing break from the sweltering coastal humidity. This high-altitude region is famous for its rolling green hills, emerald tea plantations, and cool misty mornings. Spend two days trekking along well-marked mossy forest trails, touring historic colonial-era tea estates, and taking in the panoramic views of the terraced valleys below.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Sip fresh tea overlooking the vast Boh Tea Plantation valleys</li>
+                            <li class="flex items-center gap-2">⚡ Trek through the ancient, atmospheric trails of the Mossy Forest</li>
+                            <li class="flex items-center gap-2">⚡ Experience a traditional local steamboat dinner in the cool evening</li>
+                            <li class="flex items-center gap-2">⚡ Visit a local strawberry farm to pick fresh mountain berries</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Cameron Highlands.jpg" alt="Rolling Green Tea Plantations in the Cameron Highlands" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 4: Penang and George Town -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Penang and George Town.jpg" alt="Famous Interactive Street Art Mural in George Town Penang" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">04</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Penang and George Town — 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Travel northwest to Penang island, widely celebrated as the culinary heart of Malaysia. Its capital, George Town, is a stunning open-air museum filled with well-preserved colonial shophouses, historic clan jetties, and an iconic collection of interactive street art murals. Spend four days hunting down world-renowned street dishes like Char Kway Teow and Asam Laksa in busy hawker centers. When you need a break from eating, explore the sprawling Kek Lok Si Temple or take the funicular railway up Penang Hill for views across the strait.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Embark on a street art hunt across the historic George Town alleys</li>
+                            <li class="flex items-center gap-2">⚡ Try legendary Char Kway Teow at bustling local hawker stalls</li>
+                            <li class="flex items-center gap-2">⚡ Walk along the historic wooden structures of the Chew Clan Jetty</li>
+                            <li class="flex items-center gap-2">⚡ Ride the funicular train up Penang Hill for panoramic island views</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 5: Langkawi Island -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">05</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Langkawi Island — 5 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Take a ferry or a short flight north to Langkawi, an archipelago of 99 islands set in the clear waters of the Andaman Sea. This duty-free paradise is famous for its dramatic limestone cliffs, deep mangrove forests, and long stretches of white-sand beach. Over five days, you can rent a scooter to explore quiet coastal roads, ride the thrilling Langkawi SkyCab cable car up Mount Machinchang, walk across the spectacular SkyBridge, and unwind on the sands of Pantai Cenang.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Walk the high-altitude, thrilling curves of the Langkawi SkyBridge</li>
+                            <li class="flex items-center gap-2">⚡ Rent a budget scooter to cruise the island's scenic, rural roads</li>
+                            <li class="flex items-center gap-2">⚡ Watch a spectacular, golden tropical sunset right on Pantai Cenang</li>
+                            <li class="flex items-center gap-2">⚡ Take a boat safari through the ancient Kilim Karst Mangrove Park</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Langkawi.jpg" alt="Langkawi SkyBridge High Above Tropical Mountain Canopy" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 6: Perhentian Islands -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Perenthian Islands.jpg" alt="Clear Turquoise Ocean and Coastal Footpaths of Perhentian Islands" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">06</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Perhentian Islands — 1 Week</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Cross over to the east coast for a week of pure island bliss on the Perhentian Islands. Renowned for their vibrant coral reefs and exceptionally clear turquoise waters, these islands offer some of the best budget-friendly snorkeling and scuba diving in Southeast Asia.
+                    </p>
+                    
+                    <div class="p-5 rounded-xl bg-amber-950/20 border border-amber-500/20 max-w-3xl">
+                        <p class="text-sm text-gray-300 font-light leading-relaxed">
+                            <strong class="text-[#E06A3B] font-semibold">⚓ Essential Transit Requirement:</strong> To reach this island paradise, you must make your way to the small coastal town of <strong class="text-white">Kuala Besut</strong>. This town serves as the exclusive mainland jetty hub. From Kuala Besut, you will board a local speed boat or ferry to cross the marine park strait. Keep a close eye on the monsoon schedules, as rough sea conditions completely shut down boat transfers between November and March.
+                        </p>
+                    </div>
+
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Snorkel with sea turtles and reef sharks in crystal clear bays</li>
+                            <li class="flex items-center gap-2">⚡ Unwind on the peaceful sands of Long Beach or Coral Bay</li>
+                            <li class="flex items-center gap-2">⚡ Kayak between isolated, hidden coves across the islands</li>
+                            <li class="flex items-center gap-2">⚡ Sit by beachside bonfires to watch nightly local fire shows</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 7: Taman Negara -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">07</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Taman Negara Jungle Hiking — 2 to 3 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Cap off your Malaysian adventure by heading deep into the interior to visit Taman Negara, one of the world's oldest primary rainforests at an estimated 130 million years old. Base yourself in the riverside village of Kuala Tahan, then spend two to three days trekking under the massive jungle canopy. Walk the famous high-altitude Canopy Walkway suspended deep in the treetops, arrange a night safari to spot nocturnal wildlife, and travel by traditional longboat down winding, jungle-fringed rivers.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Walk high above the rainforest floor on the Canopy Walkway</li>
+                            <li class="flex items-center gap-2">⚡ Cruise down winding jungle-fringed waterways in a traditional longboat</li>
+                            <li class="flex items-center gap-2">⚡ Join an expert guide for a thrilling nocturnal jungle night walk</li>
+                            <li class="flex items-center gap-2">⚡ Learn ancestral survival tracking methods at an Orang Asli settlement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Taman Negara.jpg" alt="Thick Jungle Canopy Bordering Rivers in Taman Negara Rainforest" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORKING NAVIGATION PATH SPLIT (Thailand on Left, Indonesia on Right) -->
+    <section class="bg-[#161616] py-20 border-t border-white/5 mt-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-2">Transit Loops</span>
+                <h3 class="font-display text-3xl text-white font-extrabold">Keep Mapping the Trail</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <!-- Left Button: Thailand -->
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Northern Overland Border</div>
+                        <h4 class="font-display text-xl text-white font-bold">Cross to Thailand</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Take a ferry from Langkawi directly to Koh Lipe or head overland via Padang Besar to explore Thailand's white-sand islands and bustling northern tracks.
+                        </p>
+                    </div>
+                    <a href="thailand.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        ← Launch Thailand Guide
+                    </a>
+                </div>
+
+                <!-- Right Button: Indonesia -->
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Southern Maritime Link</div>
+                        <h4 class="font-display text-xl text-white font-bold">Cross to Indonesia</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Catch a short budget flight from Kuala Lumpur or board a seasonal ferry across the Malacca Strait to explore the volcanic terrain and dense islands of Indonesia.
+                        </p>
+                    </div>
+                    <a href="indonesia.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        Explore Indonesia Run →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-xs text-gray-600 bg-[#121212] border-t border-white/5">
+        <p>&copy; 2026 BUDGET BACKPACKING. Designed as a practical country-by-country travel blueprint.</p>
+    </footer>
+
+</body>
+</html>

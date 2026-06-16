@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thailand Blueprint - Budget Backpacking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+        }
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .glass-nav {
+            background: rgba(26, 26, 26, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 3px;
+        }
+        .glow-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-card:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 30px rgba(224, 106, 59, 0.4);
+        }
+        
+        /* Outline Glow Button Class */
+        .btn-outline-glow {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #1A1A1A;
+            color: #FFFFFF;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-outline-glow:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 20px rgba(224, 106, 59, 0.5);
+            background: rgba(224, 106, 59, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-200 antialiased selection:bg-[#E06A3B] selection:text-white custom-scrollbar">
+
+    <!-- Swapped Navigation to Match Philippines Top-Level Structure -->
+    <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-display text-lg sm:text-xl tracking-tight text-white font-extrabold hover:opacity-80 transition-opacity uppercase">
+                BUDGET<span class="text-[#E06A3B]">.</span>BACKPACKING
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-widest text-gray-400">
+                <a href="index.html#destinations" class="hover:text-white transition-colors duration-200">COUNTRIES</a>
+                <a href="Banana_pancake_trail.html" class="hover:text-white transition-colors duration-200">BANANA PANCAKE TRAIL</a>
+                <a href="Gear_list.html" class="hover:text-white transition-colors duration-200">GEAR LIST</a>
+                <a href="Explore_map.html" class="bg-[#E06A3B] text-white px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 shadow-lg shadow-[#E06A3B]/10">
+                    EXPLORE MAP
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-12 px-6 max-w-7xl mx-auto">
+        <div class="border-b border-white/5 pb-10">
+            <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-4">Country Blueprint</span>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-8">
+                <div class="lg:col-span-7 space-y-6">
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white font-extrabold leading-[1.1]">
+                        Thailand: The Ultimate Backpacker Gateway
+                    </h1>
+                    <p class="text-gray-200 text-base sm:text-lg font-light leading-relaxed">
+                        Thailand is the undisputed beating heart of the global backpacking trail—a land where hyper-modern chaos crashes directly into ancient stillness. It is a country designed for reinvention, where you can lose yourself in dense mountain jungles on a beat-up scooter by afternoon, and eat Michelin-level street food on a plastic stool for pocket change by night. From the mist-shrouded temple peaks of the north to the sun-bleached, crystalline shores of the south, it is a rite of passage that tests your senses, expands your horizon, and sets the baseline for what real adventure feels like.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-5 w-full">
+                    <div class="aspect-[16/10] lg:aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card shadow-2xl">
+                        <img src="Thailand first pic.jpg" alt="Cinematic Thailand Limestone Cliffs" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mb-8">
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Daily Budget</span>
+                    <span class="font-display font-bold text-xl text-white">~$35 - $45 USD</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Local Currency</span>
+                    <span class="font-display font-bold text-xl text-white">Thai Baht (THB)</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Primary Transit</span>
+                    <span class="font-display font-bold text-xl text-white">Scooter / Sleeper Train</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Best Food Hack</span>
+                    <span class="font-display font-bold text-xl text-white">7-Eleven Toasties</span>
+                </div>
+            </div>
+            
+            <div class="p-5 rounded-xl bg-[#161616] border border-white/5 max-w-7xl">
+                <p class="text-sm text-gray-300 font-light leading-relaxed">
+                    <strong class="text-[#E06A3B] font-semibold">⏱️ Note on Timeframes:</strong> The day allocations listed across both regions are based on my personal track. Think of them as a highly recommended pacing blueprint, but remember—backpacking is entirely fluid. Spend as little or as long as you want in each spot; stay where you vibe, and pull the pin when you're ready to chase the next horizon.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <section class="px-6 max-w-7xl mx-auto pt-12">
+        <div class="mb-16">
+            <h2 class="font-display text-2xl sm:text-3xl text-white font-extrabold tracking-tight uppercase border-l-4 border-[#E06A3B] pl-4">
+                Part I: Northern Thailand — Culture, Canyons & Overpasses
+            </h2>
+            <p class="text-gray-300 mt-4 font-light text-base max-w-3xl leading-relaxed">
+                The North is where Thailand strips back the tourist commercialism and shows its real soul. It’s defined by dense, rolling jungle highlands, misty mountain switchbacks, ancient crumbling brick brickwork, and a highly laid-back bohemian culture that regularly traps backpackers for weeks longer than they planned.
+            </p>
+        </div>
+
+        <div class="space-y-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">01</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Bangkok — 5 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Bangkok is a beautiful sensory overload. It's a sprawling playground where ancient gold-leaf temples sit directly beside neon-drenched skyscrapers, and the scent of sizzling street-side Pad Thai cuts through the city air. The real magic of Bangkok lies in its unyielding chaos—speeding down alleys in a tuk-tuk, weaving through massive night markets, and watching the sunset cast deep pink tones over the Chao Phraya River. Five days here allows you to fully acclimate to Southeast Asia's pulse without burning out.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Explore the massive Grand Palace & Wat Pho</li>
+                            <li class="flex items-center gap-2">⚡ Dive into the street food heaven of Chinatown</li>
+                            <li class="flex items-center gap-2">⚡ Face the backpacker rite of passage on Khao San Road</li>
+                            <li class="flex items-center gap-2">⚡ Ride the local public water boats for pocket change</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Bangkok.jpg" alt="Bangkok Chinatown Street Scene" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Chiang Mai.jpg" alt="Chiang Mai Temple and Culture" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">02</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Chiang Mai — 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Heading north brings you into Thailand’s cultural capital. Surrounded by misty mountains and a crumbly brick moat, the Old City of Chiang Mai feels immensely historic yet laid back. It’s a city of golden shrines, mountain viewpoints, and legendary coffee culture. Four days gives you ample time to browse the massive night markets, hike deep into the surrounding national parks, and enjoy a much cleaner, cooler mountain air profile compared to the capital.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Catch sunrise at Wat Phra That Doi Suthep</li>
+                            <li class="flex items-center gap-2">⚡ Get lost in the massive Sunday Walking Street</li>
+                            <li class="flex items-center gap-2">⚡ Eat bowls of Khao Soi (coconut curry noodle soup)</li>
+                            <li class="flex items-center gap-2">⚡ Take a traditional Northern Thai cooking masterclass</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">03</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Moped Trek to Pai — 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        The journey to Pai is legendary: 762 sharp, mountain curves winding through steep jungle passes. Renting a moped and driving it up yourself is easily one of the most rewarding and beautiful things you will do in Thailand. Pai itself is a bohemian dream nestled in a quiet valley. It's packed with canyons, hot springs, and endless green scenery. Spending four days hidden away in these hills lets you soak in rural mountain vibes and dramatic landscapes that feel a million miles away from city life.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Watch a dramatic sunset at Pai Canyon</li>
+                            <li class="flex items-center gap-2">⚡ Swim in the crisp, cool Sai Ngam Hot Springs</li>
+                            <li class="flex items-center gap-2">⚡ Cruise through the vast interior of Lod Cave</li>
+                            <li class="flex items-center gap-2">⚡ Wander Pai’s bustling, artsy Night Walking Street</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Pai.jpg" alt="Pai Mountain Town Landscape" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Chiang Mai return.jpg" alt="Chiang Mai Old City Heritage Site" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">04</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Chiang Mai Return — 1 Day</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        After tackling the 762 curves on the way back down the mountain, crashing back in Chiang Mai for a single day is a tactical necessity. It serves as a perfect transit window to drop off your rental bike, wash the mountain dust out of your clothes, and gear up for the trek further north. Treat this evening as a relaxed pause to enjoy your favorite night market dishes before moving on.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Return your rental moped and recover</li>
+                            <li class="flex items-center gap-2">⚡ Grab a late-night street side foot massage</li>
+                            <li class="flex items-center gap-2">⚡ Stock up on essentials for the upcoming border run</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">05</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Camp Chiang Rai — 1 Day</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Chiang Rai boasts some of the most striking architectural works in the entire country, including the intricate, otherworldly design of the White Temple (Wat Rong Khun). A quick stop here hits you with unbelievable creative beauty before you head up to the border outpost of Chiang Khong. This marks the perfect climax of your Northern Thai chapter before leaping across borders. <span class="text-white font-medium">If you're ready to cross into Laos, the legendary slow boat journey down the Mekong River can be booked directly from hostels or travel agencies right here in Chiang Rai town, bundling your bus transfer and boat ticket into one painless package.</span>
+                    </p>
+                    
+                    <div class="pt-2">
+                        <a href="laos.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-2.5 rounded-xl text-xs font-semibold">
+                            Booked from Chiang Rai: Launch Laos Guide →
+                        </a>
+                    </div>
+
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3 mt-4">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Stand in awe of the surreal White Temple</li>
+                            <li class="flex items-center gap-2">⚡ Marvel at the deep artistic hues of the Blue Temple</li>
+                            <li class="flex items-center gap-2">⚡ Secure your all-in-one Slow Boat to Laos ticket package</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Chiang Rai.jpg" alt="Chiang Rai White Temple Reflection" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="max-w-7xl mx-auto border-white/5 my-24">
+
+    <section class="px-6 max-w-7xl mx-auto">
+        <div class="mb-16">
+            <h2 class="font-display text-2xl sm:text-3xl text-white font-extrabold tracking-tight uppercase border-l-4 border-[#E06A3B] pl-4">
+                Part II: Southern Thailand — Islands, Deep Jungles & Limestone Cliffs
+            </h2>
+            <p class="text-gray-300 mt-4 font-light text-base max-w-3xl leading-relaxed">
+                The South shifts the dial entirely into island paradise territory. This region is home to towering limestone monoliths exploding straight out of emerald waters, neon-drenched full moon beach raves, hidden ancient rainforest preserves, and world-class scuba diving terrains.
+            </p>
+        </div>
+
+        <div class="space-y-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">06</span>
+                        <h3 class="text-2xl font-display font-bold text-white">The Gulf Trio (Samui, Phangan, Tao) — 1 to 2 Weeks</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Island hopping through the Gulf of Thailand is an essential multi-stop playground. Koh Samui serves as the commercial gateway with its upscale beaches and dramatic jungle waterfalls. Right next door sits Koh Phangan, an island that turns into absolute neon chaos during the world-famous Full Moon Party, yet holds a peaceful yoga and sunset vibe on its northern shores. Finally, you sail into Koh Tao, a rugged, rock-rimmed diver's paradise where the vibe is incredibly social and the cost of getting your open-water certification is cheaper than almost anywhere else on the planet.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Party till dawn at the Koh Phangan Full Moon Party</li>
+                            <li class="flex items-center gap-2">⚡ Learn how to scuba dive open reefs in Koh Tao</li>
+                            <li class="flex items-center gap-2">⚡ Hike up to the John-Suwan viewpoint on Koh Tao</li>
+                            <li class="flex items-center gap-2">⚡ Rent a scooter to explore Koh Samui’s hidden lagoons</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="The Gulf Trio (Samui, Phangan, Tao).jpg" alt="Aerial Shot of Koh Tao Gulf Island Cove" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Khao Sok national park.jpg" alt="Khao Sok Lake Floating Bungalows" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">07</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Khao Sok National Park — 2 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Khao Sok is a breathtaking surrealist wonderland. It contains one of the oldest evergreen rainforests in existence, split by Cheow Lan Lake—a vast body of water flanked by massive, near-vertical limestone cliffs jutting dramatically out of the water. Spending two days here means disconnecting completely, sleeping in a floating wooden bamboo bungalow, kayaking through early morning mist pockets, and listening to wild gibbons call out across the deep jungle canopy.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Stay in an off-grid floating lake bungalow</li>
+                            <li class="flex items-center gap-2">⚡ Take a longtail boat wildlife safari tour</li>
+                            <li class="flex items-center gap-2">⚡ Kayak around prehistoric limestone monoliths</li>
+                            <li class="flex items-center gap-2">⚡ Trek into hidden stalactite-laden river caves</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">08</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Krabi Mainland & Phi Phi Excursions — 5 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Krabi is the crown jewel of the Andaman coast, centered heavily around the spectacular, cliff-locked peninsula of Railay Beach—a world-famous paradise accessible only by boat due to the massive karst mountains surrounding it. Over five days, you use Krabi’s mainland coast as a base camp to scale vertical rock faces, explore inland jungle pools, and charter traditional wooden longtail boats out to the iconic Phi Phi Islands to swim inside legendary coral lagoons and gaze at cinematic coastlines.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Watch world-class rock climbers at Railay Beach</li>
+                            <li class="flex items-center gap-2">⚡ Take a day trip boat out to Maya Bay in Phi Phi</li>
+                            <li class="flex items-center gap-2">⚡ Scale the brutal 1,260 steps of Tiger Cave Temple</li>
+                            <li class="flex items-center gap-2">⚡ Swim in the glowing, geothermal Emerald Pool</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Krabi.jpg" alt="Krabi Railay Beach Longtail Boats" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#161616] py-20 border-t border-white/5 mt-32 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-2">Choose Your Next Frontier</span>
+                <h3 class="font-display text-3xl text-white font-extrabold">Where is your trail heading next?</h3>
+                <p class="text-sm text-gray-400 font-light mt-2">The journey doesn't end here. Depending on whether you finished up in the North or the South, select your next connection.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Finished in the North?</div>
+                        <h4 class="font-display text-xl text-white font-bold">The Mekong Slow Boat to Laos</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Cross the northern border at Chiang Khong, clear immigration, and step onto a traditional long wooden slow boat to float down the Mekong River into the wilderness of Laos.
+                        </p>
+                    </div>
+                    <a href="laos.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        Launch Laos Guide →
+                    </a>
+                </div>
+
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Finished in the South?</div>
+                        <h4 class="font-display text-xl text-white font-bold">Overland Rails to Malaysia</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Hop on a southward international sleeper train or a quick flight out of Hat Yai to cross into Malaysia, trading beach chalets for the towering steel skyscrapers of Kuala Lumpur.
+                        </p>
+                    </div>
+                    <a href="malaysia.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        Launch Malaysia Guide →
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="index.html#destinations" class="text-xs tracking-wider text-gray-500 hover:text-white uppercase font-semibold transition-colors">
+                    ← Back to global map overview
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-xs text-gray-600 bg-[#121212] border-t border-white/5">
+        <p>&copy; 2026 BUDGET BACKPACKING. Designed as a practical country-by-country travel blueprint.</p>
+    </footer>
+
+</body>
+</html>

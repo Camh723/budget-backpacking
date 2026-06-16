@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnam Blueprint - Budget Backpacking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+        }
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .glass-nav {
+            background: rgba(26, 26, 26, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 3px;
+        }
+        .glow-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-card:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 30px rgba(224, 106, 59, 0.4);
+        }
+        
+        /* Outline Glow Button Class matching previous pages */
+        .btn-outline-glow {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #1A1A1A;
+            color: #FFFFFF;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-outline-glow:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 20px rgba(224, 106, 59, 0.5);
+            background: rgba(224, 106, 59, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-200 antialiased selection:bg-[#E06A3B] selection:text-white custom-scrollbar">
+
+    <!-- Swapped Navigation to Match Top-Level Structure -->
+    <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-display text-lg sm:text-xl tracking-tight text-white font-extrabold hover:opacity-80 transition-opacity uppercase">
+                BUDGET<span class="text-[#E06A3B]">.</span>BACKPACKING
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-widest text-gray-400">
+                <a href="index.html#destinations" class="hover:text-white transition-colors duration-200">COUNTRIES</a>
+                <a href="banana_pancake_trail.html" class="hover:text-white transition-colors duration-200">BANANA PANCAKE TRAIL</a>
+                <a href="gear_list.html" class="hover:text-white transition-colors duration-200">GEAR LIST</a>
+                <a href="explore_map.html" class="bg-[#E06A3B] text-white px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 shadow-lg shadow-[#E06A3B]/10">
+                    EXPLORE MAP
+                </a>
+            </div>
+        
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 focus:outline-none" onclick="toggleMobileMenu()">
+                <span id="bar1" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span id="bar2" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span id="bar3" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="md:hidden fixed top-20 left-0 w-full z-[999] hidden" style="background: rgba(18,18,18,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.07);">
+        <div class="flex flex-col px-6 py-6 space-y-5 text-xs font-semibold tracking-widest text-gray-400">
+                        <a href="index.html#destinations" onclick="toggleMobileMenu()" class="block hover:text-white transition-colors duration-200 uppercase">Countries</a>
+            <a href="banana_pancake_trail.html" onclick="toggleMobileMenu()" class="block hover:text-white transition-colors duration-200 uppercase">Banana Pancake Trail</a>
+            <a href="gear_list.html" onclick="toggleMobileMenu()" class="block hover:text-white transition-colors duration-200 uppercase">Gear List</a>
+            <a href="explore_map.html" onclick="toggleMobileMenu()" class="block text-center bg-[#E06A3B] text-white px-5 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-wider">EXPLORE MAP</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const bar1 = document.getElementById('bar1');
+            const bar2 = document.getElementById('bar2');
+            const bar3 = document.getElementById('bar3');
+            menu.classList.toggle('hidden');
+            // Animate to X
+            bar1.classList.toggle('rotate-45');
+            bar1.classList.toggle('translate-y-2');
+            bar2.classList.toggle('opacity-0');
+            bar3.classList.toggle('-rotate-45');
+            bar3.classList.toggle('-translate-y-2');
+        }
+    </script>
+
+    <header class="pt-32 pb-12 px-6 max-w-7xl mx-auto">
+        <div class="border-b border-white/5 pb-10">
+            <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-4">Country Blueprint</span>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-8">
+                <div class="lg:col-span-7 space-y-6">
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white font-extrabold leading-[1.1]">
+                        Vietnam: The Dragon Trail of Southeast Asia
+                    </h1>
+                    <p class="text-gray-200 text-base sm:text-lg font-light leading-relaxed">
+                        Vietnam is an epic, vertical odyssey. Stretching from the towering, razor-sharp karst ridges of the extreme north down to the endless, maze-like waterways of the Mekong Delta, this country demands momentum. It is a land built for transit—whether you are overnighting on sleeper trains, navigating legendary mountain passes on two wheels, or weaving through neon-lit, scooter-packed colonial alleys. From mist-shrouded rice terraces to lantern-lit heritage ports, Vietnam offers an intense, sensory-rich backpacking track that stands out as one of the most diverse on Earth.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-5 w-full">
+                    <div class="aspect-[16/10] lg:aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card shadow-2xl">
+                        <img src="First photo.jpg" alt="Cinematic Golden Bridge Vietnam" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mb-8">
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Daily Budget</span>
+                    <span class="font-display font-bold text-xl text-white">~$30 - $40 USD</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Local Currency</span>
+                    <span class="font-display font-bold text-xl text-white">Vietnamese Dong (VND)</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Primary Transit</span>
+                    <span class="font-display font-bold text-xl text-white">Sleeper Bus / Motorbike</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Best Food Hack</span>
+                    <span class="font-display font-bold text-xl text-white">Bánh Mì & Cà Phê Trứng</span>
+                </div>
+            </div>
+            
+            <div class="p-5 rounded-xl bg-[#161616] border border-white/5 max-w-7xl">
+                <p class="text-sm text-gray-300 font-light leading-relaxed">
+                    <strong class="text-[#E06A3B] font-semibold">⏱️ Note on Timeframes:</strong> The day allocations listed across both regions are based on my personal track. Think of them as a highly recommended pacing blueprint, but remember—backpacking is entirely fluid. Spend as little or as long as you want in each spot; stay where you vibe, and pull the pin when you're ready to chase the next horizon.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <section class="px-6 max-w-7xl mx-auto pt-12">
+        <div class="mb-16">
+            <h2 class="font-display text-2xl sm:text-3xl text-white font-extrabold tracking-tight uppercase border-l-4 border-[#E06A3B] pl-4">
+                Part I: Northern Vietnam — Chaos, Canyons & Mystical Bays
+            </h2>
+            <p class="text-gray-300 mt-4 font-light text-base max-w-3xl leading-relaxed">
+                The North contains the country's most dramatic landscapes. It is home to old colonial cities, world-famous emerald bays, and jaw-dropping mountain loops that border China.
+            </p>
+        </div>
+
+        <div class="space-y-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">01</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Hanoi — 3 to 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Hanoi is a striking mix of French-colonial charm and absolute scooter chaos. The heartbeat of the city is found in the narrow alleys of the Old Quarter, where motorbikes weave around outdoor Bia Hơi stalls and street food vendors. Spend your days drinking rich egg coffee, watching trains brush past buildings on Train Street, and soaking in the evening energy around Hoan Kiem Lake. <span class="text-white font-medium">Hanoi is also your logistical command center—use this time to research, choose, and book your upcoming Ha Giang Loop expedition directly from here.</span>
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Explore the bustling alleys of the Old Quarter</li>
+                            <li class="flex items-center gap-2">⚡ Sip an authentic hot Egg Coffee (Cà Phê Trứng)</li>
+                            <li class="flex items-center gap-2">⚡ Catch a train passing close by on the famous Train Street</li>
+                            <li class="flex items-center gap-2">⚡ Book your all-inclusive Ha Giang Loop transit package</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Hanoi.jpg" alt="Hanoi Train Street Vietnam" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Ha Giang Loop.jpg" alt="Ha Giang Loop Mountain Pass" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">02</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Ha Giang Loop — 4 Days <span class="text-sm font-light text-gray-400 block sm:inline sm:ml-2">(Book from Hanoi)</span></h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        The Ha Giang Loop is an unforgettable, legendary road trip. Over four days, you will ride through massive mountain passes, navigate deep canyons, and look out over vertical limestone peaks right on the edge of the Chinese border. Whether you choose to ride solo or book an "easy rider" guide to steer for you, the sheer scale of the landscape is mind-blowing. The evenings are spent in small ethnic homestays, drinking "happy water" and sharing stories with fellow travelers.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Ride along the edge of the deep Ma Pi Leng Pass</li>
+                            <li class="flex items-center gap-2">⚡ Stay at local minority homestays in Du Gia and Dong Van</li>
+                            <li class="flex items-center gap-2">⚡ Navigate the iconic, winding switchbacks of Heaven Gate</li>
+                            <li class="flex items-center gap-2">⚡ Take a longtail boat tour down the Nho Que River gorge</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">03</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Ha Long Bay — 2 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Ha Long Bay is a world-renowned natural wonder. It features thousands of limestone pillars rising out of calm, green waters. Spending two days on an overnight boat cruise allows you to sail past floating fishing villages, kayak into hidden sea caves, and watch the sun set over the iconic karst skyline. It's a classic, relaxing experience that lets you unwind after the rugged demands of the Ha Giang Loop.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Cruise on a traditional junk boat through the bay</li>
+                            <li class="flex items-center gap-2">⚡ Kayak through hidden lagoons and limestone arches</li>
+                            <li class="flex items-center gap-2">⚡ Explore the massive stalactites inside Sung Sot Cave</li>
+                            <li class="flex items-center gap-2">⚡ Watch the sunrise with early morning Tai Chi on deck</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Ha Long Bay.jpg" alt="Ha Long Bay Landscapes" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Sapa.jpg" alt="Sapa Rice Terraces Valley" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">04</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Sapa — 2 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Sapa is tucked away in the Hoang Lien Son mountain range, home to Vietnam's highest peak, Fansipan. This highland region is famous for its steep, cascading green rice terraces and rich indigenous culture. Spending two days trekking here gives you the chance to walk through mountain mist, learn about local hill-tribe traditions, and stay in rural villages surrounded by beautiful mountain vistas.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Trek through the green Muong Hoa Valley terraces</li>
+                            <li class="flex items-center gap-2">⚡ Take the cable car up to the peak of Mount Fansipan</li>
+                            <li class="flex items-center gap-2">⚡ Stay in an authentic Black Hmong village homestay</li>
+                            <li class="flex items-center gap-2">⚡ Hike down to the scenic pools of Cat Cat Waterfall</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">05</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Ninh Binh & Tam Coc — 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Ninh Binh is often called "Ha Long Bay on Land," and it's easy to see why. The landscape features dramatic limestone peaks rising directly out of bright green rice paddies and winding river networks. Setting up base in the laid-back village of Tam Coc for four days allows you to explore the area at your own pace—cycling along rural paths, taking a wooden rowboat through low river caves, and climbing the steep steps of Mua Cave for a fantastic view over the valley below.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Take a rowboat tour through the Trang An or Tam Coc caves</li>
+                            <li class="flex items-center gap-2">⚡ Climb the 500 stone steps to the top of Hang Mua Peak</li>
+                            <li class="flex items-center gap-2">⚡ Cycle past rural villages and temples on a rented bike</li>
+                            <li class="flex items-center gap-2">⚡ Explore the ancient citadel grounds of Hoa Lu</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Tam Coc.jpg" alt="Tam Coc Ninh Binh Valley" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="max-w-7xl mx-auto border-white/5 my-24">
+
+    <section class="px-6 max-w-7xl mx-auto">
+        <div class="mb-16">
+            <h2 class="font-display text-2xl sm:text-3xl text-white font-extrabold tracking-tight uppercase border-l-4 border-[#E06A3B] pl-4">
+                Part II: Central Vietnam — Caves, Imperial Cities & Coastal Passes
+            </h2>
+            <p class="text-gray-300 mt-4 font-light text-base max-w-3xl leading-relaxed">
+                Heading south brings you into Vietnam's rich cultural heart. This region is home to massive underground cave systems, ancient imperial cities, and scenic coastal mountain passes.
+            </p>
+        </div>
+
+        <div class="space-y-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">06</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Phong Nha — 2 to 3 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Phong Nha-Ke Bang National Park is a geological wonderland, housing some of the largest and oldest limestone cave systems on the planet. Spending two to three days here allows you to dive deep into the underground world. You can explore massive caverns lit up by colorful lights, zoom into zip-line mud caves, or trek through wild jungle landscapes. The village itself is small and peaceful, surrounded by green hills and clear rivers.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Marvel at the scale of Paradise Cave and Phong Nha Cave</li>
+                            <li class="flex items-center gap-2">⚡ Zip-line and swim in the mud inside Dark Cave (Hang Toi)</li>
+                            <li class="flex items-center gap-2">⚡ Rent a bicycle to explore the peaceful Bong Lai Valley</li>
+                            <li class="flex items-center gap-2">⚡ Trek out into the protected national park jungle trails</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Phong Na.jpg" alt="Phong Nha Caves National Park" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Hue.jpg" alt="Hue Imperial City Gate" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">07</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Hue — 2 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Hue is Vietnam's former imperial capital, full of history and royal heritage. Spend two days exploring the walled Imperial City, visiting royal tombs along the Perfume River, and exploring abandoned water parks. <span class="text-white font-medium">Hue also marks the start of an iconic travel experience—from here, you can rent a motorbike or join an easy rider tour to ride over the famous Hai Van Pass down to Hoi An.</span>
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Walk through the grand grounds of the Imperial Citadel</li>
+                            <li class="flex items-center gap-2">⚡ Explore the eerie, overgrown Abandoned Water Park</li>
+                            <li class="flex items-center gap-2">⚡ Ride a motorbike across the scenic Hai Van Pass</li>
+                            <li class="flex items-center gap-2">⚡ Visit the grand royal tomb of Emperor Khai Dinh</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">08</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Hoi An — 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Hoi An is a beautiful, lantern-lit town that feels frozen in time. The yellow-walled Ancient Town is a pedestrian-only zone, lined with historic merchant houses, tailor shops, and cozy cafes along the river. Spending four days here gives you plenty of time to relax—whether you want to get custom clothes made, cycle down to nearby beaches, or take a basket boat ride through mangrove forests. In the evening, the town lights up with hundreds of colorful lanterns, making it one of the most scenic spots on the entire trail.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Walk the yellow-walled streets of the Ancient Town</li>
+                            <li class="flex items-center gap-2">⚡ Get custom-tailored clothes made at a local shop</li>
+                            <li class="flex items-center gap-2">⚡ Ride a traditional bamboo basket boat in Cam Thanh</li>
+                            <li class="flex items-center gap-2">⚡ Release a small paper lantern onto the river at night</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Hoi An.jpg" alt="Hoi An Lanterns Evening" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 max-w-7xl mx-auto pt-24">
+        <div class="mb-16">
+            <h2 class="font-display text-2xl sm:text-3xl text-white font-extrabold tracking-tight uppercase border-l-4 border-[#E06A3B] pl-4">
+                Part III: Southern Vietnam — Highlands, Dunes & Energy Hubs
+            </h2>
+            <p class="text-gray-300 mt-4 font-light text-base max-w-3xl leading-relaxed">
+                The southern leg shifts into rolling highland hills, coastal desert sand dunes, and vibrant, fast-paced metropolises.
+            </p>
+        </div>
+
+        <div class="space-y-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">09</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Dalat — 3 to 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Dalat is nestled in the Central Highlands, offering a cool mountain escape from the coastal heat. This alpine town is famous for its pine forests, lakes, and French-style villas. Over three to four days, you can dive into outdoor adventures like canyoning down waterfalls, explore the surreal architecture of the Crazy House, and enjoy the thriving local cafe scene. It's a unique stop that feels completely different from the rest of the country.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Go canyoning and abseiling down Datanla Waterfalls</li>
+                            <li class="flex items-center gap-2">⚡ Explore the strange, artistic rooms of the Crazy House</li>
+                            <li class="flex items-center gap-2">⚡ Drink local highland coffee overlooking pine valleys</li>
+                            <li class="flex items-center gap-2">⚡ Ride the alpine coaster through the forest trails</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Dalat.jpg" alt="Dalat Center Streets View" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Mui Ne.jpg" alt="Mui Ne Sand Dunes Desert" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">10</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Mui Ne — 2 Days <span class="text-sm font-light text-gray-400 block sm:inline sm:ml-2">(Optional Extra)</span></h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Mui Ne is a unique coastal town famous for its massive desert sand dunes. Spending two days here allows you to see a totally different side of Vietnam's geography. You can rent a quad bike to zoom over the white dunes, slide down the red dunes at sunset, and walk through the shallow waters of the Fairy Stream flanked by strange clay formations. It's an optional, fast-paced desert stop right along the ocean.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Watch the sunset over the Red Sand Dunes</li>
+                            <li class="flex items-center gap-2">⚡ Ride an off-road ATV across the White Sand Dunes</li>
+                            <li class="flex items-center gap-2">⚡ Walk barefoot through the shallow Fairy Stream canyon</li>
+                            <li class="flex items-center gap-2">⚡ Visit the local fishing harbor packed with round boats</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">11</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Saigon — 3 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Saigon (Ho Chi Minh City) is a high-energy metropolis where modern skyscrapers tower over historic temples and street markets. Over three days, you can dive deep into the country's wartime history at the War Remnants Museum, explore the massive underground Cu Chi Tunnels network, and experience the nightlife on Bui Vien Street. <span class="text-white font-medium">Saigon marks the final chapter of your Vietnamese journey—from this southern hub, you can easily organize a bus connection or passport stamps to cross the border overland straight into Cambodia.</span>
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Visit the moving exhibits at the War Remnants Museum</li>
+                            <li class="flex items-center gap-2">⚡ Crawl through the historic underground Cu Chi Tunnels</li>
+                            <li class="flex items-center gap-2">⚡ Dive into the chaotic night market at Ben Thanh</li>
+                            <li class="flex items-center gap-2">⚡ Secure your overland bus ticket connection into Cambodia</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Saigon.jpg" alt="Saigon City Skyline Apartments" class="w-full h-full object-cover saturate-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#161616] py-20 border-t border-white/5 mt-32 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-2">Choose Your Next Frontier</span>
+                <h3 class="font-display text-3xl text-white font-extrabold">Where is your trail heading next?</h3>
+                <p class="text-sm text-gray-400 font-light mt-2">The journey keeps moving. Since you have reached the southern tip of Vietnam, prepare for your next international border connection.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Next Planned Step</div>
+                        <h4 class="font-display text-xl text-white font-bold">Overland Route to Cambodia</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Hop on a direct cross-border coach or bus from Saigon to cruise easily into Phnom Penh, paving your path toward the massive temple ruins of Angkor Wat.
+                        </p>
+                    </div>
+                    <a href="cambodia.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        Launch Cambodia Guide →
+                    </a>
+                </div>
+
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Alternative Trail</div>
+                        <h4 class="font-display text-xl text-white font-bold">Return to Map Overview</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Need to chart a completely new flight path, head back home, or look over your packing lists? Double-check your core parameters.
+                        </p>
+                    </div>
+                    <a href="index.html#destinations" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        View Global Blueprint Map →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-xs text-gray-600 bg-[#121212] border-t border-white/5">
+        <p>&copy; 2026 BUDGET BACKPACKING. Designed as a practical country-by-country travel blueprint.</p>
+    </footer>
+
+</body>
+</html>

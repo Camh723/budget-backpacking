@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Banana Pancake Trail Guide - Budget Backpacking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+        }
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .glass-nav {
+            background: rgba(26, 26, 26, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 3px;
+        }
+        .glow-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-card:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 30px rgba(224, 106, 59, 0.4);
+        }
+        .btn-outline-glow {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #1A1A1A;
+            color: #FFFFFF;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-outline-glow:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 20px rgba(224, 106, 59, 0.5);
+        }
+    </style>
+</head>
+<body class="text-gray-200 antialiased selection:bg-[#E06A3B] selection:text-white custom-scrollbar">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-display text-lg sm:text-xl tracking-tight text-white font-extrabold hover:opacity-80 transition-opacity uppercase">
+                BUDGET<span class="text-[#E06A3B]">.</span>BACKPACKING
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-widest text-gray-400">
+                <a href="index.html#destinations" class="hover:text-white transition-colors duration-200">COUNTRIES</a>
+                <a href="banana_pancake_trail.html" class="text-white transition-colors duration-200">BANANA PANCAKE TRAIL</a>
+                <a href="gear_list.html" class="hover:text-white transition-colors duration-200">GEAR LIST</a>
+                <a href="explore_map.html" class="bg-[#E06A3B] text-white px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 shadow-lg shadow-[#E06A3B]/10">
+                    EXPLORE MAP
+                </a>
+            </div>
+        
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 focus:outline-none" onclick="toggleMobileMenu()">
+                <span id="bar1" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span id="bar2" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span id="bar3" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="md:hidden fixed top-20 left-0 w-full z-[999] hidden" style="background: rgba(18,18,18,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.07);">
+        <div class="flex flex-col px-6 py-6 space-y-5 text-xs font-semibold tracking-widest text-gray-400">
+                        <a href="index.html#destinations" onclick="toggleMobileMenu()" class="block hover:text-white transition-colors duration-200 uppercase">Countries</a>
+            <a href="banana_pancake_trail.html" onclick="toggleMobileMenu()" class="block text-white uppercase">Banana Pancake Trail</a>
+            <a href="gear_list.html" onclick="toggleMobileMenu()" class="block hover:text-white transition-colors duration-200 uppercase">Gear List</a>
+            <a href="explore_map.html" onclick="toggleMobileMenu()" class="block text-center bg-[#E06A3B] text-white px-5 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-wider">EXPLORE MAP</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const bar1 = document.getElementById('bar1');
+            const bar2 = document.getElementById('bar2');
+            const bar3 = document.getElementById('bar3');
+            menu.classList.toggle('hidden');
+            // Animate to X
+            bar1.classList.toggle('rotate-45');
+            bar1.classList.toggle('translate-y-2');
+            bar2.classList.toggle('opacity-0');
+            bar3.classList.toggle('-rotate-45');
+            bar3.classList.toggle('-translate-y-2');
+        }
+    </script>
+
+    <!-- Hero Header + Cover Image -->
+    <header class="pt-32 pb-12 px-6 max-w-7xl mx-auto">
+        <div class="border-b border-white/5 pb-10">
+            <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-4">The Legendary Backpacker Loop</span>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-8">
+                <div class="lg:col-span-7 space-y-6">
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white font-extrabold leading-[1.1]">
+                        The Banana Pancake Trail
+                    </h1>
+                    <p class="text-gray-200 text-base sm:text-lg font-light leading-relaxed">
+                        Alright, so what actually is the Banana Pancake Trail? It's not an official path, but a nickname for the massive, hyper-popular travel loop through Southeast Asia. It got its name from the dirt-cheap, sweet banana pancakes that street vendors and hostel cafes serve up to hungry travelers everywhere you go. It’s a rite of passage that connects bustling mega-cities, ancient hidden temples, misty jungle valleys, and beautiful tropical beaches into one huge, social adventure.
+                    </p>
+                    <p class="text-gray-300 text-base font-light leading-relaxed">
+                        If it's your first time backpacking, this is the absolute best place to start. The travel infrastructure is incredibly easy to figure out, street food costs next to nothing, night buses are everywhere, and you'll meet hundreds of other travelers doing the exact same thing. It is the easiest, most fun way to make your money last for months on end while living out of a single bag.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-5 w-full">
+                    <div class="aspect-[4/5] max-h-[600px] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card shadow-2xl mx-auto lg:w-full">
+                        <img src="Banana pancake.jpg" alt="A stack of golden banana pancakes topped with banana slices, fresh blueberries, and a dust of powdered sugar on a white plate" class="w-full h-full object-cover contrast-105 brightness-95">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mb-8">
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Daily Damage</span>
+                    <span class="font-display font-bold text-xl text-white">$30 - $45 / Day</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">How You Move</span>
+                    <span class="font-display font-bold text-xl text-white">Sleeper Buses & Trains</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Core Countries</span>
+                    <span class="font-display font-bold text-xl text-white">TH, CB, VN, LA</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Vibe Check</span>
+                    <span class="font-display font-bold text-xl text-white">Super Social & Easygoing</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- THE GAMEPLAN: THE ROUTE WALKTHROUGH -->
+    <section class="px-6 max-w-7xl mx-auto py-6">
+        <div class="bg-[#161616] border border-white/5 rounded-2xl p-8 shadow-xl space-y-4">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl">🗺️</span>
+                <h2 class="font-display text-xl sm:text-2xl text-white font-extrabold tracking-tight uppercase">
+                    The Ultimate Blueprint Route
+                </h2>
+            </div>
+            <p class="text-gray-300 font-light leading-relaxed">
+                So, how do you actually map this out? The most classic way to do it starts by flying into the chaotic energy of <a href="thailand.html" class="text-[#E06A3B] hover:underline font-medium">Bangkok, Thailand</a>. From there, you'll head up north to check out the cafes, night markets, and mountains of Northern Thailand (like Chiang Mai and Pai). Next, you’ll cross the border east into <a href="laos.html" class="text-[#E06A3B] hover:underline font-medium">Laos</a>, catching a slow boat or bus through its sleepy river towns. Keep moving northeast and you'll hit <a href="vietnam.html" class="text-[#E06A3B] hover:underline font-medium">Vietnam</a>, where you can travel all the way up through the dramatic mountain passes of the north before heading down the coast. After that, you cut across into <a href="cambodia.html" class="text-[#E06A3B] hover:underline font-medium">Cambodia</a> to explore the massive temple ruins of Angkor Wat, before looping right back to Bangkok to reset. From Bangkok, you head straight down to South Thailand to island-hop, swim, and relax on the beaches. And if you still have money left and want to keep the dream alive, you can easily extend the trip by heading further south down into <a href="malaysia.html" class="text-[#E06A3B] hover:underline font-medium">Malaysia</a> and flying over to explore the islands and volcanoes of <a href="indonesia.html" class="text-[#E06A3B] hover:underline font-medium">Indonesia</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- STRATEGY & PACKING NOTES -->
+    <section class="px-6 max-w-7xl mx-auto py-6">
+        <div class="bg-[#161616] border border-white/5 rounded-2xl p-8 shadow-xl space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl">🎒</span>
+                <h2 class="font-display text-xl sm:text-2xl text-white font-extrabold tracking-tight uppercase">
+                    Packing Secrets & Strategy
+                </h2>
+            </div>
+            
+            <p class="text-gray-300 font-light leading-relaxed">
+                Before you go buying tickets and throwing things in a bag, remember that your clothes need to match where you're going and what you're doing. Most of the time, you'll be hanging out in hot, humid beach towns and bustling cities, so lightweight shorts, t-shirts, and sandals are your best friends. But don't get caught out—if you plan on trekking through the northern mountains, riding motorbikes through windy passes, or traveling during the cooler winter months, you are definitely going to want some warm long trousers, a solid windbreaker, and real closed-toe shoes.
+            </p>
+
+            <p class="text-gray-300 font-light leading-relaxed">
+                To keep your sanity while packing and unpacking in dark hostel rooms or rushing to catch a morning bus, do yourself a huge favor and buy some compression packing cases or packing cubes. They keep your clean gear separate from your dirty laundry, compress everything down so you actually have space left in your backpack, and mean you don't have to explode your whole bag just to find a clean pair of socks.
+            </p>
+
+            <div class="p-4 rounded-xl bg-orange-950/20 border border-orange-500/20 text-sm text-gray-300">
+                <strong class="text-[#E06A3B] block mb-1">🔒 Security Check: Don't Flash Your Cash</strong>
+                Leave your fancy jewelry, expensive designer clothing, and anything you’d be absolutely heartbroken to lose at home. Between crowded night buses, hostel lockers, messy beach parties, and bumpy ferry rides, things get lost, broken, or swiped all the time. Pack light, look low-profile, and enjoy not having to stress about your stuff.
+            </div>
+        </div>
+    </section>
+
+    <hr class="max-w-7xl mx-auto border-white/5 my-6">
+
+    <!-- THE REGIONAL TRAIL STOPS BREAKDOWN -->
+    <section class="px-6 max-w-7xl mx-auto py-12">
+        <div class="mb-12">
+            <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-2">The Big Stops</span>
+            <h2 class="font-display text-2xl sm:text-3xl text-white font-extrabold tracking-tight uppercase border-l-4 border-[#E06A3B] pl-4">
+                What to Expect on the Ground
+            </h2>
+            <p class="text-sm text-gray-400 font-light mt-2 max-w-2xl">
+                Here is a quick look at the core stops along the overland loop before you dive into the full, detailed country guides.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Thailand -->
+            <div class="bg-[#161616] border border-white/5 rounded-2xl p-6 shadow-xl glow-card flex flex-col justify-between space-y-4">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 border-b border-white/5 pb-3">
+                        <span class="text-xl">🇹🇭</span>
+                        <h3 class="font-display font-bold text-white text-lg uppercase tracking-tight">Thailand Foundations</h3>
+                    </div>
+                    <p class="text-sm text-gray-400 font-light">
+                        The ultimate starting point, centered around the beautiful madness of Bangkok's Khao San Road.
+                    </p>
+                    <ul class="space-y-3 text-xs text-gray-300 font-light pt-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#E06A3B]">⚡</span>
+                            <span><strong>The North:</strong> Head up to Chiang Mai and Pai for incredible street food markets, scooter loops, and mountain vibes.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#E06A3B]">⚡</span>
+                            <span><strong>The Islands:</strong> Head down south to find some of the best beaches, scuba diving spots, and island parties in the world.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-white/5">
+                    <a href="thailand.html" class="inline-flex items-center gap-2 text-xs font-semibold text-white bg-[#E06A3B] px-4 py-2 rounded-lg hover:bg-white hover:text-black transition-all duration-300 w-full justify-center">
+                        Open Thailand Blueprint →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cambodia & Laos -->
+            <div class="bg-[#161616] border border-white/5 rounded-2xl p-6 shadow-xl glow-card flex flex-col justify-between space-y-4">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 border-b border-white/5 pb-3">
+                        <span class="text-xl">🇰🇭 & 🇱🇦</span>
+                        <h3 class="font-display font-bold text-white text-lg uppercase tracking-tight">Cambodia & Laos</h3>
+                    </div>
+                    <p class="text-sm text-gray-400 font-light">
+                        Heading east from Thailand takes you straight into deep history, wild nature, and incredibly chilled-out river towns.
+                    </p>
+                    <ul class="space-y-3 text-xs text-gray-300 font-light pt-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#E06A3B]">⚡</span>
+                            <span><strong>Ancient Wonders:</strong> Catch a tuk-tuk and spend a few days exploring the mind-blowing jungle ruins of Angkor Wat.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#E06A3B]">⚡</span>
+                            <span><strong>Slow Living:</strong> Take a legendary slow boat down the Mekong River and soak up the relaxed, colonial vibe of Luang Prabang.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-white/5 grid grid-cols-2 gap-2">
+                    <a href="cambodia.html" class="inline-flex items-center gap-1 text-xs font-semibold text-white bg-zinc-800 border border-white/10 px-2 py-2 rounded-lg hover:border-[#E06A3B] transition-all duration-300 justify-center">
+                        Cambodia Guide
+                    </a>
+                    <a href="laos.html" class="inline-flex items-center gap-1 text-xs font-semibold text-white bg-zinc-800 border border-white/10 px-2 py-2 rounded-lg hover:border-[#E06A3B] transition-all duration-300 justify-center">
+                        Laos Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- Vietnam -->
+            <div class="bg-[#161616] border border-white/5 rounded-2xl p-6 shadow-xl glow-card flex flex-col justify-between space-y-4">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 border-b border-white/5 pb-3">
+                        <span class="text-xl">🇻🇳</span>
+                        <h3 class="font-display font-bold text-white text-lg uppercase tracking-tight">Vietnam Coastal Run</h3>
+                    </div>
+                    <p class="text-sm text-gray-400 font-light">
+                        A massive, action-packed route that connects buzzing southern cities all the way up to towering northern mountains.
+                    </p>
+                    <ul class="space-y-3 text-xs text-gray-300 font-light pt-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#E06A3B]">⚡</span>
+                            <span><strong>The Coast:</strong> Grab a flexible bus or train ticket and make your way up the coast, stopping in places like the lantern-lit town of Hoi An.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#E06A3B]">⚡</span>
+                            <span><strong>Epic Loops:</strong> Finish your trip in the far north by trekking through the rice fields of Sapa or driving the jaw-dropping Ha Giang motorbike pass.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-white/5">
+                    <a href="vietnam.html" class="inline-flex items-center gap-2 text-xs font-semibold text-white bg-[#E06A3B] px-4 py-2 rounded-lg hover:bg-white hover:text-black transition-all duration-300 w-full justify-center">
+                        Open Vietnam Blueprint →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXTENSIONS -->
+    <section class="px-6 max-w-7xl mx-auto pb-12">
+        <div class="bg-[#161616] border border-white/5 rounded-2xl p-8 shadow-xl">
+            <h3 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B] mb-4">Want to keep going? The Island Extensions</h3>
+            <p class="text-sm text-gray-300 font-light leading-relaxed mb-6">
+                If you finish the main loop through Thailand, Cambodia, Vietnam, and Laos and you’re still not ready to catch a flight home, the trail naturally keeps going south into the amazing beaches, cities, and islands of Malaysia and Indonesia.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-300 font-light">
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5 flex flex-col justify-between space-y-4">
+                    <div class="space-y-1">
+                        <strong class="text-white block mb-1">🇲🇾 Malaysia Add-on</strong>
+                        <p class="text-xs text-gray-400">Head down south to gorge on world-class street food in Penang, cool off in the Cameron Highlands tea plantations, and check out the futuristic skyline of Kuala Lumpur.</p>
+                    </div>
+                    <a href="malaysia.html" class="inline-flex text-xs font-medium text-[#E06A3B] hover:underline pt-2 items-center gap-1">
+                        Explore Malaysia Run <span>→</span>
+                    </a>
+                </div>
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5 flex flex-col justify-between space-y-4">
+                    <div class="space-y-1">
+                        <strong class="text-white block">🇮🇩 Indonesia Add-on</strong>
+                        <p class="text-xs text-gray-400">Catch a cheap budget flight over to explore the sprawling islands. Climb active volcanoes in Java, surf your heart out in Bali, or dive in the crystal-clear waters of the Gili Islands.</p>
+                    </div>
+                    <a href="indonesia.html" class="inline-flex text-xs font-medium text-[#E06A3B] hover:underline pt-2 items-center gap-1">
+                        Explore Indonesia Run <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM LINK -->
+    <section class="max-w-7xl mx-auto px-6 pb-24 text-center">
+        <div class="border-t border-white/5 pt-12">
+            <p class="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-4">Ready to safe your next destination?</p>
+            <a href="index.html#destinations" class="inline-block text-xs font-semibold tracking-widest text-white uppercase btn-outline-glow px-8 py-4 rounded-full">
+                ← Return to Country Directory
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-xs text-gray-600 bg-[#121212] border-t border-white/5">
+        <p>&copy; 2026 BUDGET BACKPACKING. Designed as a practical country-by-country travel blueprint.</p>
+    </footer>
+
+</body>
+</html>

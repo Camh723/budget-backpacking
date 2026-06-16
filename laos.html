@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laos Blueprint - Budget Backpacking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+        }
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .glass-nav {
+            background: rgba(26, 26, 26, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 3px;
+        }
+        .glow-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-card:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 30px rgba(224, 106, 59, 0.4);
+        }
+        
+        /* Outline Glow Button Class matching Thailand Page */
+        .btn-outline-glow {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #1A1A1A;
+            color: #FFFFFF;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-outline-glow:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 20px rgba(224, 106, 59, 0.5);
+            background: rgba(224, 106, 59, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-200 antialiased selection:bg-[#E06A3B] selection:text-white custom-scrollbar">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-display text-lg sm:text-xl tracking-tight text-white font-extrabold hover:opacity-80 transition-opacity uppercase">
+                BUDGET<span class="text-[#E06A3B]">.</span>BACKPACKING
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-widest text-gray-400">
+                <a href="index.html#destinations" class="hover:text-white transition-colors duration-200">COUNTRIES</a>
+                <a href="banana_pancake_trail.html" class="hover:text-white transition-colors duration-200">BANANA PANCAKE TRAIL</a>
+                <a href="gear_list.html" class="hover:text-white transition-colors duration-200">GEAR LIST</a>
+                <a href="explore_map.html" class="bg-[#E06A3B] text-white px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 shadow-lg shadow-[#E06A3B]/10">
+                    EXPLORE MAP
+                </a>
+            </div>
+        
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 focus:outline-none" onclick="toggleMobileMenu()">
+                <span id="bar1" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span id="bar2" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span id="bar3" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="md:hidden fixed top-20 left-0 w-full z-[999] hidden" style="background: rgba(18,18,18,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.07);">
+        <div class="flex flex-col px-6 py-6 space-y-5 text-xs font-semibold tracking-widest text-gray-400">
+                        <a href="index.html#destinations" onclick="toggleMobileMenu()" class="block hover:text-white transition-colors duration-200 uppercase">Countries</a>
+            <a href="banana_pancake_trail.html" onclick="toggleMobileMenu()" class="block hover:text-white transition-colors duration-200 uppercase">Banana Pancake Trail</a>
+            <a href="gear_list.html" onclick="toggleMobileMenu()" class="block hover:text-white transition-colors duration-200 uppercase">Gear List</a>
+            <a href="explore_map.html" onclick="toggleMobileMenu()" class="block text-center bg-[#E06A3B] text-white px-5 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-wider">EXPLORE MAP</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const bar1 = document.getElementById('bar1');
+            const bar2 = document.getElementById('bar2');
+            const bar3 = document.getElementById('bar3');
+            menu.classList.toggle('hidden');
+            // Animate to X
+            bar1.classList.toggle('rotate-45');
+            bar1.classList.toggle('translate-y-2');
+            bar2.classList.toggle('opacity-0');
+            bar3.classList.toggle('-rotate-45');
+            bar3.classList.toggle('-translate-y-2');
+        }
+    </script>
+
+    <!-- Hero Header + Top Picture -->
+    <header class="pt-32 pb-12 px-6 max-w-7xl mx-auto">
+        <div class="border-b border-white/5 pb-10">
+            <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-4">Country Blueprint</span>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-8">
+                <div class="lg:col-span-7 space-y-6">
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white font-extrabold leading-[1.1]">
+                        Laos: The Land of a Million Elephants & Slow Paced Rivers
+                    </h1>
+                    <p class="text-gray-200 text-base sm:text-lg font-light leading-relaxed">
+                        Step off the high-octane modern grid and into a territory defined by a completely different cadence of time. Laos shifts your perspective from chaotic neon strips to deep emerald valleys, mist-wrapped limestone towers, and sleepy riverside outposts. Traveling here means slowing right down—whether you are cruising down the legendary Mekong river on a long wooden slow boat, mapping out dramatic dirt-track mountain viewpoints, or scaling karst cliffs. It is also a land carrying profound historical weight—deeply scarred by past conflicts, it stands today as the most bombed country in the world per capita.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-5 w-full">
+                    <div class="aspect-[16/10] lg:aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card shadow-2xl">
+                        <img src="Laos first image.jpg" alt="Cinematic Laos Waterfall" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mb-8">
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Daily Budget</span>
+                    <span class="font-display font-bold text-xl text-white">~$25 - $35 USD</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Local Currency</span>
+                    <span class="font-display font-bold text-xl text-white">Lao Kip (LAK)</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Primary Transit</span>
+                    <span class="font-display font-bold text-xl text-white">Slow Boat / LCR Train</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Best Food Hack</span>
+                    <span class="font-display font-bold text-xl text-white">Street Baguettes</span>
+                </div>
+            </div>
+
+            <!-- Timeframe Banner Extra -->
+            <div class="p-5 rounded-xl bg-[#161616] border border-white/5 max-w-7xl">
+                <p class="text-sm text-gray-300 font-light leading-relaxed">
+                    <strong class="text-[#E06A3B] font-semibold">⏱️ Note on Timeframes:</strong> The day allocations listed across both regions are based on my personal track. Think of them as a highly recommended pacing blueprint, but remember—backpacking is entirely fluid. Spend as little or as long as you want in each spot; stay where you vibe, and pull the pin when you're ready to chase the next horizon.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION ONE: MAIN HIGHWAY TRAIL -->
+    <section class="px-6 max-w-7xl mx-auto pt-12">
+        <div class="mb-16">
+            <h2 class="font-display text-2xl sm:text-3xl text-white font-extrabold tracking-tight uppercase border-l-4 border-[#E06A3B] pl-4">
+                Part I: The Core Route
+            </h2>
+        </div>
+
+        <div class="space-y-24">
+            <!-- Stop 1: Luang Prabang -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">01</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Luang Prabang — 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                         Luang Prabang is an absolute cultural masterpiece. Golden-roofed temples stand beside French-colonial villas, and the smell of fresh coffee hits the morning air. Four days allows you to witness the quiet beauty of the alms-giving ceremony, explore massive waterfalls, and watch the sun dip from the top of Mount Phousi.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Swim in the tiered pools of Kuang Si Waterfall</li>
+                            <li class="flex items-center gap-2">⚡ Climb Mount Phousi for panoramic river sunsets</li>
+                            <li class="flex items-center gap-2">⚡ Witness the silent, early morning Alms Giving Ceremony (Tak Bat)</li>
+                            <li class="flex items-center gap-2">⚡ Feast at the buzzing Luang Prabang Night Market</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Luang Prabang.jpg" alt="Luang Prabang Laos" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 2: Nong Khiaw -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Nong Khiaw Hike.jpg" alt="Nong Khiaw Laos" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">02</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Nong Khiaw Hike — 3 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Nong Khiaw is a paradise for hikers, flanked by staggering vertical limestone cliffs. It is highly recommended to book your trek in Luang Prabang before arrival; the surrounding forests unfortunately contain high amounts of hidden, unexploded bombs and historic mines, meaning a certified local guide is strictly mandatory to navigate these jungle trails safely.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Scale the steep trail to the Som Nang Viewpoint</li>
+                            <li class="flex items-center gap-2">⚡ Take a longtail boat upstream to the remote village of Muang Ngoi</li>
+                            <li class="flex items-center gap-2">⚡ Explore the historic Pha Tok Caves used during past conflicts</li>
+                            <li class="flex items-center gap-2">⚡ Unwind with a traditional Lao herbal steam bath by the river</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 3: Vang Vieng -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">03</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Vang Vieng — 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Vang Vieng is a premier hub for eco-adventure. The mountain scenery is breathtaking. Over action-packed days, you can swim inside hidden subterranean blue lagoons, and tackle grueling scrambles to reach legendary viewpoints featuring vintage motorbikes anchored to the cliffs.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Tube or kayak down the Nam Song River</li>
+                            <li class="flex items-center gap-2">⚡ Scramble up Nam Xay Viewpoint to sit on the cliffside motorbike</li>
+                            <li class="flex items-center gap-2">⚡ Take a refreshing dip in Blue Lagoon 1 or 3</li>
+                            <li class="flex items-center gap-2">⚡ Explore the vast cavern of Tham Chang Cave</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Vang Vieng.jpg" alt="Vang Vieng Laos" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 4: Vientiane -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Vientiane.jpg" alt="Vientiane Laos" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">04</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Vientiane — 1 Day</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Vientiane is one of the most laid-back capital cities in the world. It replaces frantic metropolis energy with sweeping tree-lined boulevards and impressive golden stupas. It's a fantastic transport hub, from which you can organize international flights to Cambodia or Vietnam.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Visit the iconic, gold-covered Pha That Luang stupa</li>
+                            <li class="flex items-center gap-2">⚡ Climb the Patuxai Victory Monument for a bird's-eye view</li>
+                            <li class="flex items-center gap-2">⚡ Browse the unique sculptures at Buddha Park (Xieng Khuan)</li>
+                            <li class="flex items-center gap-2">⚡ Walk the Mekong Riverfront bazaar at sunset</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="max-w-7xl mx-auto border-white/5 my-24">
+
+    <!-- SECTION TWO: OPTIONAL SOUTHERN EXTRAS -->
+    <section class="px-6 max-w-7xl mx-auto pb-24">
+        <div class="mb-16">
+            <h2 class="font-display text-2xl sm:text-3xl text-white font-extrabold tracking-tight uppercase border-l-4 border-[#E06A3B] pl-4">
+                Part II: Optional Southern Extras
+            </h2>
+        </div>
+
+        <div class="space-y-24">
+            <!-- Stop 5: Pakse Loop -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">05</span>
+                        <h3 class="text-2xl font-display font-bold text-white">The Pakse Loop — 2 to 5 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        The Pakse Loop is an incredible, multi-day moped journey. It's a land defined by world-class coffee plantations, ethnic villages, and some of the tallest, most dramatic waterfalls in Southeast Asia crashing through dense jungle ravines.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Stand in awe of the twin plumes of Tad Fane waterfall</li>
+                            <li class="flex items-center gap-2">⚡ Swim in the cool pools of Tad Yuang waterfall</li>
+                            <li class="flex items-center gap-2">⚡ Tour organic coffee farms across the lush Bolaven Plateau</li>
+                            <li class="flex items-center gap-2">⚡ Explore the ancient Khmer temple ruins of Wat Phou</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Pakse Loop.jpg" alt="Pakse Loop Laos" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 6: 4000 Islands -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="4000 islands.jpg" alt="4000 Islands Laos" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">06</span>
+                        <h3 class="text-2xl font-display font-bold text-white">4000 Islands — 3 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Right at the southern tip of the country, the Mekong River spreads out into a massive archipelago. There are no cars here—just dirt tracks, bicycles, and hammocks hanging over the water. It’s an ideal place to cycle across old French railway bridges and view wide river rapids.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Rent a bicycle to explore Don Det and Don Khon islands</li>
+                            <li class="flex items-center gap-2">⚡ Witness the immense power of Khone Phapheng Falls</li>
+                            <li class="flex items-center gap-2">⚡ Spot rare Irrawaddy dolphins on a river boat tour</li>
+                            <li class="flex items-center gap-2">⚡ Catch a stunning Mekong sunset from a waterside hammock</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORKING NAVIGATION PATH SPLIT (Thailand on Left, Vietnam on Right) -->
+    <section class="bg-[#161616] py-20 border-t border-white/5 mt-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-2">Transit Loops</span>
+                <h3 class="font-display text-3xl text-white font-extrabold">Keep Mapping the Trail</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <!-- Left Button: Thailand -->
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Western Overland Run</div>
+                        <h4 class="font-display text-xl text-white font-bold">Cross into Thailand</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Take the iconic slow boat up the Mekong or hop on the rail line to dive straight into the lush mountain loops, temples, and bustling street markets of Northern Thailand.
+                        </p>
+                    </div>
+                    <a href="thailand.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        ← Open Thailand Blueprint
+                    </a>
+                </div>
+
+                <!-- Right Button: Vietnam -->
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Eastern Mountain Passes</div>
+                        <h4 class="font-display text-xl text-white font-bold">Cross into Vietnam</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Head east over rugged mountain frontiers or book an express bus route to descend into the stunning rice terraces, iconic street food hubs, and historic cities of Vietnam.
+                        </p>
+                    </div>
+                    <a href="vietnam.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        Explore Vietnam Run →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer matching Indonesia.html style -->
+    <footer class="py-8 text-center text-xs text-gray-600 bg-[#121212] border-t border-white/5">
+        <p>&copy; 2026 BUDGET BACKPACKING. Designed as a practical country-by-country travel blueprint.</p>
+    </footer>
+
+</body>
+</html>

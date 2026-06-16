@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Backpacking - 11 Countries. 1 Backpack.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+        }
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .glass-nav {
+            background: rgba(26, 26, 26, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 3px;
+        }
+        
+        /* Enhanced Orange Glow Effect */
+        .glow-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-card:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 30px rgba(224, 106, 59, 0.5);
+        }
+    </style>
+</head>
+<body class="text-gray-200 antialiased selection:bg-[#E06A3B] selection:text-white custom-scrollbar">
+
+    <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-display text-lg sm:text-xl tracking-tight text-white font-extrabold hover:opacity-80 transition-opacity uppercase">
+                BUDGET<span class="text-[#E06A3B]">.</span>BACKPACKING
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-widest text-gray-400">
+                <a href="#destinations" class="hover:text-white transition-colors duration-200">COUNTRIES</a>
+                <a href="banana_pancake_trail.html" class="hover:text-white transition-colors duration-200">BANANA PANCAKE TRAIL</a>
+                <a href="gear_list.html" class="hover:text-white transition-colors duration-200">GEAR LIST</a>
+                <a href="explore_map.html" class="bg-[#E06A3B] text-white px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 shadow-lg shadow-[#E06A3B]/10">
+                    EXPLORE MAP
+                </a>
+            </div>
+        
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 focus:outline-none" onclick="toggleMobileMenu()">
+                <span id="bar1" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span id="bar2" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span id="bar3" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="md:hidden fixed top-20 left-0 w-full z-[999] hidden" style="background: rgba(18,18,18,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.07);">
+        <div class="flex flex-col px-6 py-6 space-y-5 text-xs font-semibold tracking-widest text-gray-400">
+                        <a href="#destinations" onclick="toggleMobileMenu()" class="block text-white uppercase">Countries</a>
+            <a href="banana_pancake_trail.html" onclick="toggleMobileMenu()" class="block hover:text-white transition-colors duration-200 uppercase">Banana Pancake Trail</a>
+            <a href="gear_list.html" onclick="toggleMobileMenu()" class="block hover:text-white transition-colors duration-200 uppercase">Gear List</a>
+            <a href="explore_map.html" onclick="toggleMobileMenu()" class="block text-center bg-[#E06A3B] text-white px-5 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-wider">EXPLORE MAP</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const bar1 = document.getElementById('bar1');
+            const bar2 = document.getElementById('bar2');
+            const bar3 = document.getElementById('bar3');
+            menu.classList.toggle('hidden');
+            // Animate to X
+            bar1.classList.toggle('rotate-45');
+            bar1.classList.toggle('translate-y-2');
+            bar2.classList.toggle('opacity-0');
+            bar3.classList.toggle('-rotate-45');
+            bar3.classList.toggle('-translate-y-2');
+        }
+    </script>
+
+    <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            
+            <div class="lg:col-span-7 lg:sticky lg:top-36">
+                <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-4">The Unfiltered Blueprint</span>
+                <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white font-extrabold leading-[1.1] mb-8">
+                    Quit the job.<br>Cancel the rent.<br>Buy the ticket.
+                </h1>
+                
+                <div class="space-y-6 text-gray-200 text-base sm:text-lg leading-relaxed font-light max-w-2xl">
+                    <p>
+                        Thinking of throwing your laptop in a lake and backpacking Southeast Asia, Australia, and New Zealand? Does looking at the eye-watering cost of rent in London make you genuinely angry that you weren't born into Victorian nobility? Is your mum currently telling you it’s a terrible idea and that you need to "focus on your career"?
+                    </p>
+                    <p class="font-medium text-white text-xl sm:text-2xl font-display">
+                        If that sounds familiar, welcome home.
+                    </p>
+                    <p>
+                        At 25, I did the math and realized a devastating truth: it was literally cheaper for me to quit my 9-to-5 and backpack through Asia than it was to rent a single bedroom in London while working full-time. So, that’s exactly what I did. I handed in my notice, packed a single bag, and spent 6 months chasing suns across Asia. To keep the dream alive, I set up base in Melbourne, worked for half a year, and used it to fund an epic loop around Australia and New Zealand.
+                    </p>
+                    <p>
+                        I built this site to give you the unfiltered blueprint. Just a simple, country-by-country guide to surviving the budget-shocks, eating like a king, and preparing you for the greatest adventure of your life.
+                    </p>
+                </div>
+
+                <div class="mt-10">
+                    <a href="#destinations" class="inline-flex items-center gap-3 border border-gray-700 text-white px-8 py-4 rounded-xl font-medium tracking-wide hover:border-[#E06A3B] hover:bg-[#E06A3B]/5 transition-all duration-300 group">
+                        Explore the Destinations
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 space-y-6">
+                <div class="aspect-[3/4] w-full rounded-2xl bg-[#1A1A1A] overflow-hidden relative group border border-white/5 glow-card shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8 z-20">
+                        <span class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B] mb-1">📍 Northern Vietnam</span>
+                        <h3 class="font-display text-xl text-white font-bold">Trading spreadsheets for open roads.</h3>
+                    </div>
+                    <img src="North Vietnam.jpg" alt="North Vietnamese Mountains" class="w-full h-full object-cover opacity-95 group-hover:scale-105 transition-transform duration-700 contrast-125 brightness-135 saturate-135">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="destinations" class="bg-[#161616] py-24 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-2">The Route Directory</span>
+                <h2 class="font-display text-3xl sm:text-4xl text-white font-extrabold tracking-tight">The countries I've travelled</h2>
+                <p class="text-gray-300 mt-2 font-light">Select a country to access the tailored itineraries, budgets, and insider hacks.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[280px]">
+                
+                <div class="lg:col-span-2 group relative overflow-hidden rounded-2xl bg-[#222] border border-white/5 glow-card cursor-pointer" onclick="window.location.href='thailand.html'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-display text-2xl text-white font-bold tracking-tight">Thailand</h3>
+                                <p class="text-xs text-gray-200 font-light mt-1">Street Food, Islands & Absolute Chaos</p>
+                            </div>
+                            <span class="text-xs bg-black/50 text-white font-semibold px-3 py-1.5 rounded-full border border-white/20 group-hover:bg-[#E06A3B] group-hover:border-[#E06A3B] transition-colors backdrop-blur-sm">~$35/day</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=1000&auto=format&fit=crop" alt="Vibrant Thailand temple" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 contrast-120 brightness-130 saturate-125">
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl bg-[#222] border border-white/5 glow-card cursor-pointer" onclick="window.location.href='laos.html'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-display text-xl text-white font-bold tracking-tight">Laos</h3>
+                                <p class="text-xs text-gray-200 font-light mt-1">Slow Rivers & Secret Waterfalls</p>
+                            </div>
+                            <span class="text-xs bg-black/50 text-white font-semibold px-3 py-1.5 rounded-full border border-white/20 group-hover:bg-[#E06A3B] group-hover:border-[#E06A3B] transition-colors backdrop-blur-sm">~$30/day</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=600&auto=format&fit=crop" alt="Laos Waterfall" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 contrast-120 brightness-130 saturate-125">
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl bg-[#222] border border-white/5 glow-card cursor-pointer" onclick="window.location.href='vietnam.html'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-display text-xl text-white font-bold tracking-tight">Vietnam</h3>
+                                <p class="text-xs text-gray-200 font-light mt-1">Motorbike Passes & Egg Coffee</p>
+                            </div>
+                            <span class="text-xs bg-black/50 text-white font-semibold px-3 py-1.5 rounded-full border border-white/20 group-hover:bg-[#E06A3B] group-hover:border-[#E06A3B] transition-colors backdrop-blur-sm">~$35/day</span>
+                        </div>
+                    </div>
+                    <img src="North Vietnam.jpg" alt="Vietnam Mountains" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 contrast-120 brightness-130 saturate-125">
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl bg-[#222] border border-white/5 glow-card cursor-pointer" onclick="window.location.href='cambodia.html'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-display text-xl text-white font-bold tracking-tight">Cambodia</h3>
+                                <p class="text-xs text-gray-200 font-light mt-1">Angkor Wat Exploration</p>
+                            </div>
+                            <span class="text-xs bg-black/50 text-white font-semibold px-3 py-1.5 rounded-full border border-white/20 group-hover:bg-[#E06A3B] group-hover:border-[#E06A3B] transition-colors backdrop-blur-sm">~$35/day</span>
+                        </div>
+                    </div>
+                    <img src="Ankor Wat.png" alt="Cambodia Angkor Wat Temple" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 contrast-120 brightness-130 saturate-125">
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl bg-[#222] border border-white/5 glow-card cursor-pointer" onclick="window.location.href='malaysia.html'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-display text-xl text-white font-bold tracking-tight">Malaysia</h3>
+                                <p class="text-xs text-gray-200 font-light mt-1">Skyscrapers & Jungle Horizons</p>
+                            </div>
+                            <span class="text-xs bg-black/50 text-white font-semibold px-3 py-1.5 rounded-full border border-white/20 group-hover:bg-[#E06A3B] group-hover:border-[#E06A3B] transition-colors backdrop-blur-sm">~$40/day</span>
+                        </div>
+                    </div>
+                    <img src="Malaysia.jpg" alt="Kuala Lumpur Malaysia Towers" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 contrast-120 brightness-130 saturate-125">
+                </div>
+
+                <div class="lg:col-span-2 group relative overflow-hidden rounded-2xl bg-[#222] border border-white/5 glow-card cursor-pointer" onclick="window.location.href='indonesia.html'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-display text-2xl text-white font-bold tracking-tight">Indonesia</h3>
+                                <p class="text-xs text-gray-200 font-light mt-1">Volcano Chasing & Island Hopping</p>
+                            </div>
+                            <span class="text-xs bg-black/50 text-white font-semibold px-3 py-1.5 rounded-full border border-white/20 group-hover:bg-[#E06A3B] group-hover:border-[#E06A3B] transition-colors backdrop-blur-sm">~$40/day</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=800&auto=format&fit=crop" alt="Bali Indonesia Temple" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 contrast-120 brightness-130 saturate-125">
+                </div>
+
+                <!-- Geographically positioned here: right after Malaysia and Indonesia -->
+                <div class="group relative overflow-hidden rounded-2xl bg-[#222] border border-white/5 glow-card cursor-pointer" onclick="window.location.href='philippines.html'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-display text-xl text-white font-bold tracking-tight">Philippines</h3>
+                                <p class="text-xs text-gray-200 font-light mt-1">White-Sand Loops & Turquoise Ocean Trading</p>
+                            </div>
+                            <span class="text-xs bg-black/50 text-white font-semibold px-3 py-1.5 rounded-full border border-white/20 group-hover:bg-[#E06A3B] group-hover:border-[#E06A3B] transition-colors backdrop-blur-sm">~$35/day</span>
+                        </div>
+                    </div>
+                    <img src="Philippines.jpg" alt="Beautiful Philippines Coastline" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 contrast-120 brightness-130 saturate-125">
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl bg-[#222] border border-white/5 glow-card cursor-pointer" onclick="window.location.href='korea.html'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-display text-xl text-white font-bold tracking-tight">South Korea</h3>
+                                <p class="text-xs text-gray-200 font-light mt-1">Neon Subways & Night Markets</p>
+                            </div>
+                            <span class="text-xs bg-black/50 text-white font-semibold px-3 py-1.5 rounded-full border border-white/20 group-hover:bg-[#E06A3B] group-hover:border-[#E06A3B] transition-colors backdrop-blur-sm">~$75/day</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?q=80&w=600&auto=format&fit=crop" alt="Seoul South Korea" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 contrast-120 brightness-130 saturate-125">
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl bg-[#222] border border-white/5 glow-card cursor-pointer" onclick="window.location.href='japan.html'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-display text-xl text-white font-bold tracking-tight">Japan</h3>
+                                <p class="text-xs text-gray-200 font-light mt-1">Futuristic Trains & Ancient Shrines</p>
+                            </div>
+                            <span class="text-xs bg-black/50 text-white font-semibold px-3 py-1.5 rounded-full border border-white/20 group-hover:bg-[#E06A3B] group-hover:border-[#E06A3B] transition-colors backdrop-blur-sm">~$85/day</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=600&auto=format&fit=crop" alt="Kyoto Japan Shrine" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 contrast-120 brightness-130 saturate-125">
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl bg-[#1A1A1A] border border-[#E06A3B]/30 glow-card cursor-pointer shadow-xl shadow-[#E06A3B]/5" onclick="window.location.href='australia.html'">
+                    <div class="absolute top-4 left-4 z-30 bg-[#E06A3B] text-white text-[10px] font-bold tracking-widest px-2.5 py-1 rounded-md uppercase">Oceania Flashpack</div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-display text-xl text-white font-bold tracking-tight">Australia</h3>
+                                <p class="text-xs text-gray-200 font-light mt-1">Van Life & Hot Chicken Budget Hacks</p>
+                            </div>
+                            <span class="text-xs bg-[#E06A3B]/20 text-[#E06A3B] font-semibold px-3 py-1.5 rounded-full border border-[#E06A3B]/30 group-hover:bg-[#E06A3B] group-hover:text-white transition-colors">~$110/day</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?q=80&w=600&auto=format&fit=crop" alt="Australia Outback Road" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 contrast-120 brightness-130 saturate-125">
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl bg-[#1A1A1A] border border-[#E06A3B]/30 glow-card cursor-pointer shadow-xl shadow-[#E06A3B]/5 md:col-span-1 lg:col-span-2" onclick="window.location.href='new_zealand.html'">
+                    <div class="absolute top-4 left-4 z-30 bg-[#E06A3B] text-white text-[10px] font-bold tracking-widest px-2.5 py-1 rounded-md uppercase">Oceania Flashpack</div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 z-20">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div>
+                                <h3 class="font-display text-xl text-white font-bold tracking-tight">New Zealand</h3>
+                                <p class="text-xs text-gray-200 font-light mt-1">Glacier Hikes, Campervans & One-Pot Pasta Fuel</p>
+                            </div>
+                            <span class="text-xs bg-[#E06A3B]/20 text-[#E06A3B] font-semibold px-3 py-1.5 rounded-full border border-[#E06A3B]/30 self-start md:self-center group-hover:bg-[#E06A3B] group-hover:text-white transition-colors">~$120/day</span>
+                        </div>
+                    </div>
+                    <img src="New Zealand.jpg" alt="New Zealand Mountains Lake" class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 contrast-120 brightness-130 saturate-125">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-xs text-gray-600 border-t border-white/5">
+        <p>&copy; 2026 BUDGET BACKPACKING. Designed as a practical country-by-country travel blueprint.</p>
+    </footer>
+
+</body>
+</html>

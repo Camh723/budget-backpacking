@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indonesia Blueprint - Budget Backpacking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+        }
+        .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .glass-nav {
+            background: rgba(26, 26, 26, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 3px;
+        }
+        .glow-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-card:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 30px rgba(224, 106, 59, 0.4);
+        }
+        
+        .btn-outline-glow {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #1A1A1A;
+            color: #FFFFFF;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-outline-glow:hover {
+            border-color: #E06A3B;
+            box-shadow: 0 0 20px rgba(224, 106, 59, 0.5);
+            background: rgba(224, 106, 59, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-200 antialiased selection:bg-[#E06A3B] selection:text-white custom-scrollbar">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-display text-lg sm:text-xl tracking-tight text-white font-extrabold hover:opacity-80 transition-opacity uppercase">
+                BUDGET<span class="text-[#E06A3B]">.</span>BACKPACKING
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-widest text-gray-400">
+                <a href="index.html#destinations" class="hover:text-white transition-colors duration-200">COUNTRIES</a>
+                <a href="banana_pancake_trail.html" class="hover:text-white transition-colors duration-200">BANANA PANCAKE TRAIL</a>
+                <a href="gear_list.html" class="hover:text-white transition-colors duration-200">GEAR LIST</a>
+                <a href="explore_map.html" class="bg-[#E06A3B] text-white px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 shadow-lg shadow-[#E06A3B]/10">
+                    EXPLORE MAP
+                </a>
+            </div>
+        
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 focus:outline-none" onclick="toggleMobileMenu()">
+                <span id="bar1" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span id="bar2" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span id="bar3" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="md:hidden fixed top-20 left-0 w-full z-[999] hidden" style="background: rgba(18,18,18,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.07);">
+        <div class="flex flex-col px-6 py-6 space-y-5 text-xs font-semibold tracking-widest text-gray-400">
+                        <a href="index.html#destinations" onclick="toggleMobileMenu()" class="block hover:text-white transition-colors duration-200 uppercase">Countries</a>
+            <a href="banana_pancake_trail.html" onclick="toggleMobileMenu()" class="block hover:text-white transition-colors duration-200 uppercase">Banana Pancake Trail</a>
+            <a href="gear_list.html" onclick="toggleMobileMenu()" class="block hover:text-white transition-colors duration-200 uppercase">Gear List</a>
+            <a href="explore_map.html" onclick="toggleMobileMenu()" class="block text-center bg-[#E06A3B] text-white px-5 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-wider">EXPLORE MAP</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const bar1 = document.getElementById('bar1');
+            const bar2 = document.getElementById('bar2');
+            const bar3 = document.getElementById('bar3');
+            menu.classList.toggle('hidden');
+            // Animate to X
+            bar1.classList.toggle('rotate-45');
+            bar1.classList.toggle('translate-y-2');
+            bar2.classList.toggle('opacity-0');
+            bar3.classList.toggle('-rotate-45');
+            bar3.classList.toggle('-translate-y-2');
+        }
+    </script>
+
+    <!-- Hero Header + Top Picture -->
+    <header class="pt-32 pb-12 px-6 max-w-7xl mx-auto">
+        <div class="border-b border-white/5 pb-10">
+            <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-4">Country Blueprint</span>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-8">
+                <div class="lg:col-span-7 space-y-6">
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white font-extrabold leading-[1.1]">
+                        Indonesia: Island Hopping the Volcanic Archipelago
+                    </h1>
+                    <p class="text-gray-200 text-base sm:text-lg font-light leading-relaxed">
+                        Spanning thousands of volcanic islands across the equator, you could easily spend 3 months in Indonesia and barely scratch the surface of its immense geographical and cultural diversity. From the shifting volcanic peaks of Java to the untouched waters of Raja Ampat, this massive nation defies a single definition. However, to make the absolute most of a standard backpacker run, this blueprint focuses deeply on a highly rewarding, action-packed island route covering Bali, the Gili Islands, Lombok, Nusa Penida, and an unforgettable 4-day Komodo Dragon expedition.
+                    </p>
+                    <p class="text-gray-300 text-base font-light leading-relaxed">
+                        Traveling through this region offers an intense mix of landscapes, moving swiftly from terraced rice fields and sacred Hindu temples to world-class marine sanctuaries. While navigating the sheer scale of Indonesia can seem daunting, an established network of local fast boats, budget airlines, and coastal ferries makes bouncing between these neighboring islands both highly affordable and incredibly thrilling for independent travelers.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-5 w-full">
+                    <div class="aspect-[2/3] max-h-[600px] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card shadow-2xl mx-auto lg:w-full">
+                        <img src="Indonesia first picture.jpg" alt="Stunning layers of volcanic peaks bathed in golden morning light across Indonesia" class="w-full h-full object-cover contrast-95 brightness-95 saturate-115">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mb-8">
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Daily Budget</span>
+                    <span class="font-display font-bold text-xl text-white">~$25 - $40 USD</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Primary Currency</span>
+                    <span class="font-display font-bold text-xl text-white">Indonesian Rupiah (IDR)</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Transit Style</span>
+                    <span class="font-display font-bold text-xl text-white">Fast Boats, Scooters & Bluebird</span>
+                </div>
+                <div class="bg-[#161616] border border-white/5 p-4 rounded-xl">
+                    <span class="text-xs text-gray-400 block mb-1 uppercase tracking-wider">Top Marine Focus</span>
+                    <span class="font-display font-bold text-xl text-white">Manta Rays & Coral Reefs</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HEALTH & SAFETY SECTION -->
+    <section class="px-6 max-w-7xl mx-auto py-6">
+        <div class="bg-[#161616] border border-white/5 rounded-2xl p-8 shadow-xl">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-2xl">🌋</span>
+                <h2 class="font-display text-xl sm:text-2xl text-white font-extrabold tracking-tight uppercase">
+                    Backpacker Safety, Nightlife Security & Scooter Tactics
+                </h2>
+            </div>
+            
+            <p class="text-gray-300 font-light leading-relaxed mb-6">
+                Navigating the islands of Indonesia requires a sharp mix of physical awareness on the roads and street smarts when diving into the high-intensity nightlife areas:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5">
+                    <h3 class="text-[#E06A3B] font-display font-semibold text-lg mb-2">Nightlife Awareness</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        In heavily commercialized nightlife zones like Kuta, Canggu, and Seminyak, local organized crime and club mafias operate behind the scenes. Be highly vigilant when drinking at night, never leave beverages unattended, and actively avoid escalating any arguments with bouncers, taxi drivers, or locals.
+                    </p>
+                </div>
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5">
+                    <h3 class="text-[#E06A3B] font-display font-semibold text-lg mb-2">Scooter Hazards</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Renting a scooter is the ultimate way to see islands like Lombok and Nusa Penida, but traffic can be chaotic. Gravelly, steep switchbacks claim dozens of backpackers weekly. Always wear a helmet, carry an International Driving Permit, and don't ride beyond your skill level.
+                    </p>
+                </div>
+                <div class="bg-[#1A1A1A] p-5 rounded-xl border border-white/5">
+                    <h3 class="text-[#E06A3B] font-display font-semibold text-lg mb-2">Methanol Poisoning</h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Be incredibly careful with cheap, unbranded local spirits (like poorly home-distilled Arak) in budget beach bars, particularly on the Gili Islands. Stick to reputable venues, sealed commercial bottles, or standard local beers like Bintang to completely avoid lethal methanol risks.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-6">
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B] mb-4">Essential Pack Track Tactics</h4>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-300 font-light">
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Avoid Water Contamination:</strong> Drink exclusively bottled water and watch out for ice made from unfiltered tap sources ("Bali Belly" is no joke).</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Download Gojek / Grab:</strong> Use these apps in Bali for completely transparent ride-hailing and to bypass aggressive local taxi syndicates.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Respect Holy Ground:</strong> Wear a proper sarong when entering any Balinese temple complex; respect local ceremonies and offerings on the streets.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#E06A3B] font-bold">✓</span> 
+                        <span><strong>Sea Sickness Prep:</strong> Fast boat transfers across the Lombok Strait get notoriously bumpy—keep motion sickness pills close at hand.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <hr class="max-w-7xl mx-auto border-white/5 my-12">
+
+    <!-- INDONESIA RUN ITINERARY STOPS -->
+    <section class="px-6 max-w-7xl mx-auto pb-24">
+        <div class="mb-16">
+            <h2 class="font-display text-2xl sm:text-3xl text-white font-extrabold tracking-tight uppercase border-l-4 border-[#E06A3B] pl-4">
+                The East Nusa Tenggara & Island Loop
+            </h2>
+        </div>
+
+        <div class="space-y-24">
+            <!-- Stop 1: Bali -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">01</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Bali — 5 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        To be completely candid, Bali was a personal disappointment. The island has become incredibly over-commercialized, heavily congested, and often feels like it has traded away its authentic cultural soul to feed the demands of mass tourism. That being said, many people I know absolutely love it here for the cafe culture and beach clubs, so it is still a mandatory stop to form your own opinion. Because localized nightlife syndicates and club mafias run deep in the main hubs, keep your wits about you during late nights out and avoid getting into heated arguments over prices or transport.
+                    </p>
+                    <p class="text-gray-300 font-light leading-relaxed text-sm">
+                        <strong>Sights to see:</strong> Despite the crowds, you should still check out the iconic water temple of <strong class="text-white">Pura Ulun Danu Bratan</strong>, explore the sprawling rice terraces of Tegallalang in Ubud, and catch a sunset overlooking the coastal cliffs at Uluwatu Temple.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Explore the lush terraced fields of Tegallalang in Ubud</li>
+                            <li class="flex items-center gap-2">⚡ Watch the traditional Kecak fire dance at Uluwatu Temple</li>
+                            <li class="flex items-center gap-2">⚡ Admire the lakeside setting of Pura Ulun Danu Bratan</li>
+                            <li class="flex items-center gap-2">⚡ Experience the thriving local cafe scene and beach clubs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Bali.jpg" alt="Pura Ulun Danu Bratan water temple reflecting on the lake in Bali" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 2: Nusa Penida -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Nusa Penida.jpg" alt="Dramatic white sand beach and towering coastal rock formations of Nusa Penida" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">02</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Nusa Penida — 3 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Hop on a fast boat from Sanur over to Nusa Penida, an island defined by its massive, jaw-dropping coastal cliffs and rugged terrain. Spend three days exploring the iconic T-Rex shaped headland at Kelingking Beach, swimming in the natural pool of Angel's Billabong, and checking out Broken Beach. Make sure to book a morning boat trip out to Manta Point, where you can snorkel right alongside massive, majestic manta rays feeding in the rich coastal currents.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Take in the panoramic views at the iconic Kelingking Beach cliff edge</li>
+                            <li class="flex items-center gap-2">⚡ Snorkel with giant oceanic manta rays at Manta Point</li>
+                            <li class="flex items-center gap-2">⚡ Peer down into the unique geological circular archway at Broken Beach</li>
+                            <li class="flex items-center gap-2">⚡ Swim in the clear, wave-carved natural pool at Angel's Billabong</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 3: Gili Islands -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">03</span>
+                        <h3 class="text-2xl font-display font-bold text-white">The Gili Islands — 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Head further east to the Gili Islands, an archipelago of three tiny, motorized-vehicle-free coral islands. Whether you choose Gili Trawangan for its energetic nightlife, Gili Air for a laid-back social vibe, or Gili Meno for total isolation, these islands are all about slow-paced beach life. Rent a bicycle to ride around the sandy perimeter roads, watch stunning sunsets over Mount Agung in the distance, and swim directly off the beaches to spot wild sea turtles hanging out in the shallow reefs.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Bicycle around the sandy, vehicle-free perimeter roads of the islands</li>
+                            <li class="flex items-center gap-2">⚡ Spot wild sea turtles swimming in the shallow offshore coral reefs</li>
+                            <li class="flex items-center gap-2">⚡ Enjoy beachfront night markets and energetic evening social spots</li>
+                            <li class="flex items-center gap-2">⚡ Watch a beautiful ocean sunset with Mount Agung lining the horizon</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Gilli Islands.jpg" alt="A green sea turtle swimming over a coral reef in the crystal clear waters of the Gili Islands" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 4: Lombok -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-last lg:order-first">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Lombok.jpg" alt="Powerful jungle waterfall cascading down a sheer green cliffside in Lombok" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">04</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Lombok — 5 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Take a quick boat across to Lombok, an expansive island that feels like a much wilder, more untouched version of what Bali used to be. Base yourself around the southern surf town of Kuta Lombok to explore miles of pristine, empty white-sand coastlines by scooter. Head north into the dense, dramatic jungle highlands surrounding Mount Rinjani to seek out hidden volcanic waterfalls like Tiu Kelep, and immerse yourself in the rich, traditional heritage of the indigenous Sasak communities.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Ride a scooter along empty coastal tracks to find secluded white-sand beaches</li>
+                            <li class="flex items-center gap-2">⚡ Trek through northern volcanic jungles to the towering Tiu Kelep waterfall</li>
+                            <li class="flex items-center gap-2">⚡ Learn about indigenous customs and architecture at a Sasak cultural village</li>
+                            <li class="flex items-center gap-2">⚡ Experience the relaxed, authentic surf culture around Kuta Lombok</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop 5: Komodo Dragon Tour -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-display font-extrabold text-[#E06A3B]">05</span>
+                        <h3 class="text-2xl font-display font-bold text-white">Komodo National Park Expedition — 4 Days</h3>
+                    </div>
+                    <p class="text-gray-200 font-light leading-relaxed text-base">
+                        Cap off your trip with an incredible 4-day liveaboard boat expedition starting from Lombok and sailing all the way into Komodo National Park. This journey across the open sea is a massive highlight for backpackers. You will drop anchor to hike up the iconic, rugged ridges of Padar Island for an incredible panoramic view, swim along the striking shores of Pink Beach, and trek alongside local park rangers to see prehistoric Komodo Dragons roaming completely free in their natural environment.
+                    </p>
+                    <div class="bg-[#161616] p-6 rounded-xl border border-white/5 space-y-3">
+                        <h4 class="text-xs font-semibold uppercase tracking-widest text-[#E06A3B]">Essential Things To Do</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300 font-light">
+                            <li class="flex items-center gap-2">⚡ Hike up the rugged ridges of Padar Island for unmatched panoramic bay views</li>
+                            <li class="flex items-center gap-2">⚡ Walk along the unique, bright shorelines of Pink Beach</li>
+                            <li class="flex items-center gap-2">⚡ Trek with national park rangers to spot Komodo Dragons in the wild</li>
+                            <li class="flex items-center gap-2">⚡ Live on an open-sea liveaboard boat connecting different volcanic islands</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-white/5 glow-card">
+                        <img src="Komodo Tour.jpg" alt="A massive Komodo Dragon resting on rocks inside the national park" class="w-full h-full object-cover contrast-95 brightness-95 saturate-125 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORKING NAVIGATION PATH SPLIT (Malaysia on Left, Australia on Right) -->
+    <section class="bg-[#161616] py-20 border-t border-white/5 mt-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase font-semibold tracking-widest text-[#E06A3B] block mb-2">Transit Loops</span>
+                <h3 class="font-display text-3xl text-white font-extrabold">Keep Mapping the Trail</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <!-- Left Button: Malaysia -->
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Northern Maritime Route</div>
+                        <h4 class="font-display text-xl text-white font-bold">Return to Malaysia</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Catch a quick budget flight back up to Kuala Lumpur to explore Malaysia's historic trading towns, ancient primary rain canopies, and legendary hawker markets.
+                        </p>
+                    </div>
+                    <a href="malaysia.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        ← Open Malaysia Blueprint
+                    </a>
+                </div>
+
+                <!-- Right Button: Australia -->
+                <div class="bg-[#121212] border border-white/5 p-8 rounded-2xl flex flex-col justify-between items-start space-y-6 glow-card">
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold tracking-widest text-[#E06A3B] uppercase">Southern Oceania Connection</div>
+                        <h4 class="font-display text-xl text-white font-bold">Fly to Australia</h4>
+                        <p class="text-sm text-gray-400 font-light leading-relaxed">
+                            Board a direct flight down south from Denpasar straight into Western Australia or the east coast hubs to take on a massive working holiday van journey.
+                        </p>
+                    </div>
+                    <a href="australia.html" class="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-xl text-xs font-semibold w-full justify-center">
+                        Explore Australia Run →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-xs text-gray-600 bg-[#121212] border-t border-white/5">
+        <p>&copy; 2026 BUDGET BACKPACKING. Designed as a practical country-by-country travel blueprint.</p>
+    </footer>
+
+</body>
+</html>
